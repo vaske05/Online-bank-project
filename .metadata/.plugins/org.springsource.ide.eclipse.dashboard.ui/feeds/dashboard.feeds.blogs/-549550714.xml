@@ -5,7 +5,139 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2017-11-01T14:15:28Z</updated>
+  <updated>2017-11-01T15:46:43Z</updated>
+  <entry>
+    <title>Spring Integration 5.0 Release Candidate 1 Available</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/11/01/spring-integration-5-0-release-candidate-1-available" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Artem Bilan</name>
+    </author>
+    <id>tag:spring.io,2017-11-01:3084</id>
+    <updated>2017-11-01T15:46:43Z</updated>
+    <content type="html">&lt;div class="paragraph"&gt;
+&lt;p&gt;On behalf of the Spring Integration team I am pleased to announce that the Release Candidate 1 for the Spring Integration 5.0 version (&lt;code&gt;5.0.0.RC1&lt;/code&gt;) is now available.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;It can be downloaded from the &lt;a href="https://repo.spring.io/milestone"&gt;Milestone Repository&lt;/a&gt;:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;repositories {
+    maven { url 'http://repo.spring.io/libs-milestone' }
+}
+
+compile "org.springframework.integration:spring-integration-core:5.0.0.RC1"&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;a href="https://jira.spring.io/jira/secure/ReleaseNote.jspa?projectId=10121&amp;amp;version=16198"&gt;20 JIRAs&lt;/a&gt; (and some GitHub issues) are included in this release, together with bug fixes and a number of new features.
+Some highlights of features in the &lt;code&gt;RC1&lt;/code&gt;, since the previously announced &lt;a href="https://spring.io/blog/2017/09/14/spring-integration-5-0-milestone-7-and-4-3-12-available"&gt;Milestone 7&lt;/a&gt;:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The components populated by the Java DSL parser are now registered as &lt;code&gt;BeanDefinitions&lt;/code&gt;  in the application context, thanks to newly introduced in the Spring Framework &lt;code&gt;5.0&lt;/code&gt; &lt;code&gt;Supplier&lt;/code&gt;-based programmatic bean registration.
+This approach helps us to avoid some boilerplate code for singletons registration and initialization.
+In addition this &lt;code&gt;BeanDefinition&lt;/code&gt; registration may be useful in some use-case to select particular components in the application context.
+In fact, exactly that is used in the &lt;a href="https://cloud.spring.io/spring-cloud-function/"&gt;Spring Cloud Function&lt;/a&gt; project for &lt;code&gt;java.util.function.*&lt;/code&gt; beans scanning.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The &lt;code&gt;IntegrationFlows.from(Class&amp;lt;?&amp;gt; serviceInterface)&lt;/code&gt; has now overloaded version with an additional &lt;code&gt;beanName&lt;/code&gt; argument.
+This becomes exactly the bean name for a generates gateway proxy overriding the &lt;code&gt;[flowId].gateway&lt;/code&gt; value:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;@Bean
+public IntegrationFlow uppercaseFlow() {
+return IntegrationFlows.from(MessageFunction.class, "uppercase")
+        .&amp;lt;String, String&amp;gt;transform(String::toUpperCase)
+        .get();
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;This us useful again in the mentioned above Spring Cloud Function when we expose the function as an entry point into the microservice by its bean name.
+Also this is convenient with manually registered integration flows via &lt;code&gt;IntegrationFlowContext&lt;/code&gt;, when we have "ugly" generated bean name for the &lt;code&gt;IntegrationFlow&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The HTTP Inbound Endpoints (including WebFlux) now correctly handle the &lt;code&gt;ResponseEntity&lt;/code&gt; in the reply message:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;@Bean
+public WebFluxInboundEndpoint errorInboundEndpoint() {
+    WebFluxInboundEndpoint endpoint = new WebFluxInboundEndpoint();
+    RequestMapping requestMapping = new RequestMapping();
+    requestMapping.setPathPatterns("/error");
+    endpoint.setRequestMapping(requestMapping);
+    endpoint.setRequestChannelName("errorServiceChannel");
+    return endpoint;
+}
+
+@ServiceActivator(inputChannel = "errorServiceChannel")
+public ResponseEntity&amp;lt;String&amp;gt; processHttpRequest() {
+    return new ResponseEntity&amp;lt;&amp;gt;("&amp;lt;500 Internal Server Error,{}&amp;gt;",
+                                       HttpStatus.INTERNAL_SERVER_ERROR);
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;This way we have aligned Spring Integration Channel Adapters for Web with the existing behavior in Spring MVC and Spring WebFlux.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;In addition to upgrade to the latest &lt;a href="https://spring.io/blog/2017/10/30/spring-web-services-3-0-0-release-2-4-2-release-is-out"&gt;Spring Web Services&lt;/a&gt; &lt;code&gt;3.0&lt;/code&gt; and &lt;a href="https://www.igniterealtime.org/projects/smack/"&gt;Smack&lt;/a&gt; &lt;code&gt;4.2.1&lt;/code&gt;, we have fixed the handling for the DOM POX messages in the Spring Integration Web Services Gateways.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Some Leader Initiators now may emit &lt;code&gt;OnFailedToAcquireMutexEvents&lt;/code&gt;, when they fail to obtain the lock for shared resource.
+It happens very often, so check &lt;code&gt;LockRegistryLeaderInitiator#setPublishFailedEvents()&lt;/code&gt; for more information.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The &lt;code&gt;JdbcChannelMessageStore&lt;/code&gt; can now be supplied with the custom &lt;code&gt;MessageGroupPreparedStatementSetter&lt;/code&gt; for some non-standard message store structure or different from default Java serialization behavior.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The &lt;code&gt;ClientStompEncoder&lt;/code&gt; has been introduced to properly populate a &lt;code&gt;SEND&lt;/code&gt; STOMP frame when we use &lt;code&gt;StompSubProtocolHandler&lt;/code&gt; from the client side.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Special thanks to several community members for their ongoing active contributions to the framework; scan &lt;a href="https://github.com/spring-projects/spring-integration/commits/v5.0.0.RC1"&gt;the commits&lt;/a&gt; and give them some kudos!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;For a complete list of changes in &lt;code&gt;5.0&lt;/code&gt;, also see the
+&lt;a href="http://docs.spring.io/spring-integration/docs/5.0.0.RC1/reference/html/whats-new.html"&gt;What&amp;#8217;s New&lt;/a&gt; chapter in the reference manual.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;We expect GA in a couple weeks - just in time for Spring Boot &lt;code&gt;2.0 GA&lt;/code&gt;!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="admonitionblock important"&gt;
+&lt;table&gt;
+&lt;tr&gt;
+&lt;td class="icon"&gt;
+&lt;div class="title"&gt;Important&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class="content"&gt;
+I along with most of my colleagues on the Spring team will be at &lt;a href="https://springoneplatform.io"&gt;Spring One Platform&lt;/a&gt; speaking about these new features in Spring Integration.
+So sign up now!
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Any feedback, feature ideas, critics, bug reports and questions are welcome via appropriate communication channels:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;a href="http://projects.spring.io/spring-integration/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://jira.spring.io/browse/INT"&gt;JIRA&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-integration/blob/master/CONTRIBUTING.adoc"&gt;Contributing&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-integration"&gt;Help&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-integration"&gt;Chat&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;</content>
+  </entry>
   <entry>
     <title>Spring Session 2.0.0.RC1 Released</title>
     <link rel="alternate" href="https://spring.io/blog/2017/11/01/spring-session-2-0-0-rc1-released" />
@@ -1983,42 +2115,5 @@ After that we will switch to the version &lt;code&gt;2.0&lt;/code&gt; based on t
     <content type="html">&lt;p&gt;Speaker: &lt;a href="https://www.twitter.com/starbuxman"&gt;Josh Long&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Hi Spring fans! In this tip, we&amp;rsquo;ll look at how to integrate a Spring Boot application with JAX-RS (using the Jersey reference implementation). JAX-RS is a JCP standard for building REST applications. &lt;/p&gt;
 &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/deB70lfUJBU" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
-  </entry>
-  <entry>
-    <title>This Week in Spring - October 17th, 2017</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/10/17/this-week-in-spring-october-17th-2017" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2017-10-17:3067</id>
-    <updated>2017-10-17T23:44:00Z</updated>
-    <content type="html">&lt;p&gt;Hi Spring fans! Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! This week I&amp;rsquo;ve been in Dallas and Austin, Texas, first for customer meetings and then to attend and speak at &lt;a href="https://www.reactivesummit.org/"&gt;the epic Reactive Summit&lt;/a&gt;. If you&amp;rsquo;re around, don&amp;rsquo;t hesitate to &lt;a href="http://twitter.com/starbuxman"&gt;say hi on Twitter!&lt;/a&gt; We&amp;rsquo;ve got a &lt;em&gt;lot&lt;/em&gt; to cover so let&amp;rsquo;s get to it!&lt;/p&gt;
-&lt;p&gt;Also, I&amp;rsquo;ll be doing a webinar with our friends at OCI on November 9th, 2017, on &lt;a href="https://objectcomputing.com/products/grails/webinar-grails-3-spring-developers/"&gt;Grails for the Spring Developer, with my friend and Grails co-founder Jeff Scott Brown&lt;/a&gt;. I hope you&amp;rsquo;ll join us! &lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Last week, SpringSource co-founder and Spring Framework lead &lt;a href="https://spring.io/blog/2017/10/10/spring-co-founder-and-spring-framework-lead-juergen-hoeller-wins-jax-special-jury-award"&gt;Juergen Hoeller won a JAX Special Jury Award for all of his considerable work since the very beginning of the Spring projects&lt;/a&gt;. Thanks to him, the special jury noted, &amp;ldquo;Spring Framework has never needed a complete rewrite in all of the years it has existed. Instead, it has continuously adapted to the changing trends.&amp;rdquo; Thank you, Juergen, for all that you do.&lt;/li&gt;
-  &lt;li&gt;Last week, I looked at how to use &lt;a href="https://spring.io/blog/2017/10/11/spring-tips-bootiful-reactive-scala"&gt;Scala with a reactive Spring Boot and Spring Webflix-based application&lt;/a&gt; and how to interoperate with other Reactive Streams-compliant projects like Akka Streams.&lt;/li&gt;
-  &lt;li&gt;Spring Data lead Oliver Gierke just announced &lt;a href="https://spring.io/blog/2017/10/11/spring-data-ingalls-sr8-released"&gt;Spring Data Ingalls SR8&lt;/a&gt;. This release includes a number of improvements and bug fixes and is a recommended upgrade for all those using the Ingalls release train.&lt;/li&gt;
-  &lt;li&gt;Spring Boot &lt;a href="https://spring.io/blog/2017/10/12/spring-boot-2-0-0-m5-available-now"&gt;lead Phil Webb just announced Spring Boot 2.0.0.M5&lt;/a&gt;. The new release is &lt;a href="http://start.spring.io"&gt;now available on the Spring Initializr&lt;/a&gt;. It includes preliminary support for Java 9, OAuth 2 client support from Spring Security 5.0, JSON-B support, and a new Spring Session Actuator endpoint.&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2017/10/12/spring-tool-suite-3-9-1-released"&gt;Spring Tool Suite lead Martin Lippert just announced Spring Tool Suite 3.9.1&lt;/a&gt;. The new release updates to Eclipse Oxygen 1.a, includes JDK 9 and JUnit 5, updated the Spring Boot Dashboard to support insight of &lt;em&gt;running&lt;/em&gt; beans in a Spring Boot release. This last thing is &lt;em&gt;so&lt;/em&gt; cool! There&amp;rsquo;s also a refactoring to convert &lt;code&gt;application.properties&lt;/code&gt; to &lt;code&gt;application.yml&lt;/code&gt;, and of course a slew of bug-fixes and improvements.&lt;/li&gt;
-  &lt;li&gt;Spring ninja Stéphane Nicoll just announced &lt;a href="https://spring.io/blog/2017/10/17/spring-boot-1-5-8-available-now"&gt;Spring Boot 1.5.8&lt;/a&gt; is now available. The new release includes over 40 fixes, improvements and dependency updates. This is a recommended update.&lt;/li&gt;
-  &lt;li&gt;Spring Web Services lead Greg Turnquist &lt;a href="https://spring.io/blog/2017/10/17/spring-web-services-2-4-1-release-3-0-0-rc1-released"&gt;just announced Spring WS 2.4.1 and 3.0.0.RC1&lt;/a&gt;. The 2.4.1 has a few minor patches where 3.0.0.RC1 has a number of major upgrades. The new release baselines on Java 8 and Spring Framework 5.0. If you&amp;rsquo;re building SOAP-based services, this is for you!&lt;/li&gt;
-  &lt;li&gt;Have you seen the new &lt;a href="http://cloud.spring.io/spring-cloud-gcp/"&gt;Spring Cloud integration for Google Cloud Platform&lt;/a&gt;? There&amp;rsquo;s a &lt;em&gt;lot&lt;/em&gt; to like here including integration with core GCP functionality like the project ID, and Runtime Config API, Google Cloud Pub/Sub, Google Cloud SQL, Google Cloud Storage, and Spring Cloud Sleuth integration with Google Stackdriver!&lt;/li&gt;
-  &lt;li&gt;Spring Data lead &lt;a href="https://content.pivotal.io/podcasts/from-monolith-to-a-system-of-systems-ep-46?mkt_tok=eyJpIjoiTmpNMlpURmxPR0ZqWm1ZeCIsInQiOiJVWllnQzRDSG1XRFFqb3JaUzZSN0VHNnMyUEJpTzZXbXhOSlwvRVNESWRuOGJKdGhTTnlCSkVUdjRYaFo2ZWJcL3pRSGVKaUNoZWdGaHRsXC92WFIwRHZwZFJ5aFp1SUllQmFpVTVaa05KMCtKbEQ3UThnUDB5dTdJa3JcL3FKaVFQZzgifQ%253D%253D"&gt;Oliver Gierke gave a really nice interview in this podcast&lt;/a&gt; on moving from a monolith to a system of systems. Definitely worth a listen!&lt;/li&gt;
-  &lt;li&gt;Judy Wang has a nice look at &lt;a href="https://content.pivotal.io/blog/how-pcf-metrics-helps-you-reduce-mttr-for-spring-boot-apps-and-save-money-too?_lrsc=11ca73a3-c08a-4131-86af-9743179a2b51"&gt;how Pivotal Cloud Foundry&amp;rsquo;s &amp;ldquo;PCF Metrics&amp;rdquo; reduce mean-time-to-recovery&lt;/a&gt; with better insight..&lt;/li&gt;
-  &lt;li&gt;Spring Framework founder and Atomist&amp;rsquo;s CEO Rod Johnson &lt;a href="https://the-composition.com/if-you-care-about-it-automate-it-with-atomist-20eccb8a28"&gt;introduces Atomist&amp;rsquo;s larger perspective of automation of development&lt;/a&gt; in this interesting blog post. Atomist provide a number of tools that could be very useful for Spring developers.&lt;/li&gt;
-  &lt;li&gt;our very own Kenny Bastani looks at using event driven architectures with a variety of Spring-based &lt;a href="https://github.com/kbastani/event-stream-processing-microservices#packaging"&gt;technologies in this sample application&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;I loved Vedran Paviæ&amp;rsquo;s slides for his presentation, &lt;a href="https://speakerdeck.com/vpavic/from-zero-to-open-source-hero-contributing-to-spring-projects-2"&gt;&lt;em&gt;From Zero to Open-Sourcec Hero: Contributing to Spring Projects&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring framework founder and Atomist CEO Rod Johnson expands on Atomist&amp;rsquo;s perspective around the automation of development in this blog post. &lt;a href="https://the-composition.com/if-you-care-about-it-automate-it-with-atomist-20eccb8a28?source=userActivityShare-a17df5ec14a4-1508101154"&gt;This is rocket sauce for developers&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;I did a webinar for the folks at JetBrains on Reactive Spring. That webinar &lt;a href="https://blog.jetbrains.com/idea/2017/10/reactive-spring/?mail=event"&gt;is now available here&lt;/a&gt;. The webinar introduces Reactor, Spring Framework 5.0 (and Spring WebFlux), Spring Data Kay, Spring Boot 2.0 (and the Actuator), Spring Security 5.0, and the &lt;code&gt;WebClient&lt;/code&gt;, all in the Kotlin language! I hope you enjoy.&lt;/li&gt;
-  &lt;li&gt;I thought this was pretty cool - Pivotal &lt;a href="https://www.ispot.tv/ad/A9Fp/dell-technologies-magic-with-ge-featuring-jeffrey-wright"&gt;has a TV commercial&lt;/a&gt;!&lt;/li&gt;
-  &lt;li&gt;Spring testing ninja Sam Brannen &lt;a href="https://github.com/sbrannen/junit5-demo/blob/master/src/test/java/extensions/CaptureSystemOutput.java"&gt;put together a nice example&lt;/a&gt; on how to write a JUnit 5 Jupiter extension that replaces a common &lt;code&gt;@Rule&lt;/code&gt; from the JUnit 4 programmming model.&lt;/li&gt;
-  &lt;li&gt;Redmonk&amp;rsquo;s James Governor has some insight into the death of Hudson, which Oracle publicly deprecated last week at Oracle OpenWorld, and the prevalence of technologies like Jenkins, &lt;a href="https://redmonk.com/jgovernor/2017/10/12/oh-hai-jenkins-oh-bye-hudson-lets-keep-an-eye-on-concourse/"&gt;and rising stars like Pivotal&amp;rsquo;s Concourse&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;Also, Redmonk&amp;rsquo;s James Governor &lt;a href="https://redmonk.com/jgovernor/2017/10/11/some-thoughts-on-cloud-foundry-summit/"&gt;also reviews some of the news from the Cloud Foundry Summit&lt;/a&gt; including the emerging details of Kubo, the Kubernetes implementation managed by Pivotal Cloud Foundry.&lt;/li&gt;
-  &lt;li&gt;This is an oldie but a goodie from Tim Spann at Hortonworks &lt;a href="https://community.hortonworks.com/content/kbentry/56642/creating-a-spring-boot-java-8-microservice-to-read.html"&gt;on creating a Spring Boot microservice to read Apache Phoenix Data&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;TechCrunch also had a roundup of the recent Cloud Foundry Summit news, focusing on &lt;a href="https://techcrunch.com/2017/10/11/cloud-foundry-launches-its-online-marketplace-and-adds-native-kubernetes-support/amp/"&gt;the integration of Kubernetes for containers into Cloud Foundry&lt;/a&gt;. This is ideal for stateful services like Elasticsearch.&lt;/li&gt;
-  &lt;li&gt;JAXEnter&amp;rsquo;s Jane Elizabeth has a nice look &lt;a href="https://jaxenter.com/spring-data-kay-137782.html"&gt;at Spring Data Kay&lt;/a&gt;, the recently released (reactive Spring Data implementation.&lt;/li&gt;
-  &lt;li&gt;The JAX Innovation awards just took place and, in particular, we&amp;rsquo;re elated to see that &lt;a href="https://jaxenter.com/winners-jax-innovation-awards-2017-137993.html"&gt;Spring Framework lead Juergen Hoeller&lt;/a&gt; has won a JAX Special Jury Award. TL;DR: Spring is one of the largest and continuously maintained codebases and no other person in the Java community has done more to contribute to and shape such a codebase for so long. Thanks to Juergen, the codebase hasn&amp;rsquo;t required a complete rewrite. As the announcement says, &amp;ldquo;Thank you, Jürgen, for everything you’ve done for Spring Framework!&amp;rdquo;&lt;/li&gt;
-&lt;/ul&gt;</content>
   </entry>
 </feed>
