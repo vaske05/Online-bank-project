@@ -1,0 +1,5 @@
+package com.userfront.controller;
+
+public class HomeController {
+
+}
