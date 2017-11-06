@@ -5,7 +5,64 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2017-11-01T15:46:43Z</updated>
+  <updated>2017-11-06T08:48:48Z</updated>
+  <entry>
+    <title>Spring Boot 2.0.0 M6 available now</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/11/06/spring-boot-2-0-0-m6-available-now" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Stéphane Nicoll</name>
+    </author>
+    <id>tag:spring.io,2017-11-06:3088</id>
+    <updated>2017-11-06T08:48:48Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the team, it is my pleasure to announce that Spring Boot 2.0.0.M6 has been released and is now available from &lt;a href="http://repo.spring.io/milestone/"&gt;our milestone repository&lt;/a&gt;. This release closes &lt;a href="https://github.com/spring-projects/spring-boot/milestone/92?closed=1"&gt;141 issues and pull requests&lt;/a&gt; and continues our progress towards 2.0 GA. Thanks to everyone that has contributed!&lt;/p&gt;
+&lt;p&gt;This milestone refines a number of items from previous milestones, and provides a number of notable new features:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Initial support for HTTP/2&lt;/strong&gt; - At the moment Tomcat and Undertow are supported (See &lt;a href="https://github.com/spring-projects/spring-boot/issues/10902"&gt;#10902&lt;/a&gt; for the Jetty support)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Improved support for WebFlux-based apps&lt;/strong&gt; - Spring Boot now supports TLS configuration for all containers and error page support is available&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Kotlin extension&lt;/strong&gt; - The first Kotlin extension has landed. You can now start your app in a more idiomatic way:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;package com.example.demo&#xD;
+&#xD;
+import org.springframework.boot.autoconfigure.SpringBootApplication&#xD;
+import org.springframework.boot.runApplication&#xD;
+&#xD;
+@SpringBootApplication&#xD;
+class DemoApplication&#xD;
+&#xD;
+fun main(args: Array&amp;lt;String&amp;gt;) {&#xD;
+    runApplication&amp;lt;DemoApplication&amp;gt;(*args)&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;For a complete list of changes, and upgrade instructions, see the &lt;a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.0.0-M6-Release-Notes"&gt;Spring Boot 2.0.0.M6 Release Notes&lt;/a&gt; on the WIKI. &lt;/p&gt;
+&lt;p&gt;To get started with Spring Boot 2.0.0 M6 and discover those new feature, you can easily bootstrap a new project on &lt;a href="https://start.spring.io"&gt;start.spring.io&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://projects.spring.io/spring-boot/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-boot/docs/2.0.0.M6/reference/htmlsingle"&gt;Documentation&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-boot"&gt;Stack Overflow&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Batch 4.0.0.RC1 is now available</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/11/02/spring-batch-4-0-0-rc1-is-now-available" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Michael Minella</name>
+    </author>
+    <id>tag:spring.io,2017-11-02:3085</id>
+    <updated>2017-11-02T21:48:37Z</updated>
+    <content type="html">&lt;p&gt;We are pleased to announce that Spring Batch 4.0.0.RC1 is now available via Github and the Pivotal download repository. This release represents the first release candidate for the Spring Batch 4.0 release. Many thanks to all that contributed to this release.&lt;/p&gt;&lt;h2&gt;&lt;a href="#what-rsquo-s-new" class="anchor" name="what-rsquo-s-new"&gt;&lt;/a&gt;What&amp;rsquo;s new?&lt;/h2&gt;
+&lt;p&gt;This release represents the completion of new functionality work on the 4.0.0 line. New features in Spring Batch 4 include:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Updated baseline&lt;/li&gt;
+  &lt;li&gt;New builder APIs for out of the box components&lt;/li&gt;
+  &lt;li&gt;Updated, java configuration friendly, documentation&lt;/li&gt;
+&lt;/ul&gt;&lt;h2&gt;&lt;a href="#updated-baseline" class="anchor" name="updated-baseline"&gt;&lt;/a&gt;Updated Baseline&lt;/h2&gt;
+&lt;p&gt;Spring Batch 4.0 is taking the opportunity to reset the baseline for the project. With that in mind, we are upgrading the minimum java version to Java 8. While this should be transparent to users, it has allowed us to take advantage of new language features we have not had access to yet.&lt;/p&gt;
+&lt;p&gt;Along with the java version upgrade, we also have upgraded all the dependencies. That includes requiring Spring Framework 5 and all the pertinent versions of the portfolio that go along with it. Spring Batch 4 has done it&amp;rsquo;s best to keep the dependencies in alignment with Spring Boot 2.&lt;/p&gt;
+&lt;p&gt;Specific updates for this release is the inclusion of Spring Integration&amp;rsquo;s 5.0.0.RC1 and other minor updates.&lt;/p&gt;&lt;h2&gt;&lt;a href="#new-builder-apis" class="anchor" name="new-builder-apis"&gt;&lt;/a&gt;New Builder APIs&lt;/h2&gt;
+&lt;p&gt;Since this is the first major version release since Spring Boot was released, this is the first time we&amp;rsquo;ve been able to take a moment and look at the java configuration story holistically. While Spring Batch has had java configuration options before Spring Boot, configuring many of the out of the box components required a lot of verbose configuration. An example of this is the &lt;code&gt;FlatFileItemReader&lt;/code&gt;. Configuring this reader previously took dozens of lines of XML or java configuration and can now be configured in 10 or so lines. This release includes builders for all of the &lt;code&gt;ItemReader&lt;/code&gt; and &lt;code&gt;ItemWriter&lt;/code&gt; implementations provided by Spring Batch.&lt;/p&gt;&lt;h2&gt;&lt;a href="#updated-reference-documentation" class="anchor" name="updated-reference-documentation"&gt;&lt;/a&gt;Updated Reference Documentation&lt;/h2&gt;
+&lt;p&gt;Spring Batch&amp;rsquo;s documentation has historically been very XML focused in it&amp;rsquo;s examples of configuration. In the Spring Batch 4.0 release we have revamped the documentation from the ground up. At the top of each page in the reference documentation is a toggle for java or XML. This toggle indicates what form of configuration is presented through out the page. If java is selected, all the examples will be presented using java configuration. If XML is selected, XML based examples are displayed. We hope this will help users to better navigate the configuration options within the framework.&lt;/p&gt;&lt;h2&gt;&lt;a href="#what-rsquo-s-next" class="anchor" name="what-rsquo-s-next"&gt;&lt;/a&gt;What&amp;rsquo;s next?&lt;/h2&gt;
+&lt;p&gt;As mentioned before, this release represents the final release with new functionality in it for the 4.0.0 release. From 4.0.0.RC1 to when we go GA we&amp;rsquo;ll be working on bugs and tweaking the documentation further to provide a better overall experience.&lt;/p&gt;&lt;h2&gt;&lt;a href="#what-do-you-think" class="anchor" name="what-do-you-think"&gt;&lt;/a&gt;What do you think?&lt;/h2&gt;
+&lt;p&gt;We look forward to your feedback on these new features in &lt;a href="https://jira.spring.io/browse/BATCH/"&gt;Jira&lt;/a&gt;, &lt;a href="https://stackoverflow.com/tags/spring-batch"&gt;StackOverflow&lt;/a&gt;, or to me directly via Twitter &lt;a href="https://twitter.com/michaelminella"&gt;@michaelminella&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://projects.spring.io/spring-batch/"&gt;Spring Batch Home&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-batch"&gt;Source on GitHub&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-batch/4.0.x/reference/html/index.html"&gt;Reference Documentation&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Spring Integration 5.0 Release Candidate 1 Available</title>
     <link rel="alternate" href="https://spring.io/blog/2017/11/01/spring-integration-5-0-release-candidate-1-available" />
@@ -2031,89 +2088,5 @@ Try out the the various testing tools and techniques provided by  Spring Boot, S
   &lt;li&gt;I love this amazing example from Spring Framework, reactive Spring and Kotlin ninja Sébastien Deleuze demonstrating &lt;a href="https://github.com/sdeleuze/spring-kotlin-fullstack"&gt;how to use Kotlin for both the front end and back end of an application&lt;/a&gt;. The front-end leverages Kotlin2JS and the backend leverages Kotlin on the JVM (with Spring Boot, natch)&lt;/li&gt;
   &lt;li&gt;I haven&amp;rsquo;t read this yet, but it does interesting: Ravi Kant Soni has written &lt;a href="https://www.amazon.com/Full-Stack-AngularJS-Java-Developers/dp/148423197X/ref=redir_mobile_desktop/131-1572141-3987769?_encoding=UTF8&amp;dpID=51XPtAmfcFL&amp;dpPl=1&amp;keywords=ravi%20kant%20soni&amp;pi=AC_SX236_SY340_FMwebp_QL65&amp;qid=1508328122&amp;ref=plSrch&amp;ref_=mp_s_a_1_1&amp;sr=8-1"&gt;a book on building Angular applications with Spring Boot&lt;/a&gt;. Check it out.&lt;/li&gt;
 &lt;/ul&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Integration for AWS 1.1 Release Candidate  1 Available</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/10/19/spring-integration-for-aws-1-1-release-candidate-1-available" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Artem Bilan</name>
-    </author>
-    <id>tag:spring.io,2017-10-19:3068</id>
-    <updated>2017-10-19T19:19:23Z</updated>
-    <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;Dear Spring Community!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Today I’d like to announce the first Release Candidate of the version &lt;code&gt;1.1&lt;/code&gt; of Spring Integration for &lt;a href="https://aws.amazon.com"&gt;Amazon Web Services&lt;/a&gt;.
-Its artifact&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="literalblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre&gt;org.springframework.integration:spring-integration-aws:1.1.0.RC1&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;is available in the &lt;a href="https://repo.spring.io/milestone/"&gt;Milestone Repository&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Thanks to everybody contributed!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Some highlights of the features since the previously announced &lt;a href="https://spring.io/blog/2017/03/09/spring-integration-extension-for-aws-1-1-0-m1-available"&gt;Milestone 1&lt;/a&gt;:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="sect1"&gt;
-&lt;h2 id="kinesismessagedrivenchanneladapter"&gt;&lt;a class="anchor" href="#kinesismessagedrivenchanneladapter"&gt;&lt;/a&gt;KinesisMessageDrivenChannelAdapter&lt;/h2&gt;
-&lt;div class="sectionbody"&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;The &lt;code&gt;KinesisMessageDrivenChannelAdapter&lt;/code&gt; has been improved to handle properly expired and throttled shard iterators.
-Also it now skips closed shards.
-Some other bug fixed have been provided after early community adoption.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="sect1"&gt;
-&lt;h2 id="dynamodbmetadatastore"&gt;&lt;a class="anchor" href="#dynamodbmetadatastore"&gt;&lt;/a&gt;DynamoDbMetaDataStore&lt;/h2&gt;
-&lt;div class="sectionbody"&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;The &lt;code&gt;ConcurrentMetadataStore&lt;/code&gt; implementation for the AWS &lt;a href="https://aws.amazon.com/dynamodb"&gt;DynamoDB&lt;/a&gt; is now provided via &lt;code&gt;DynamoDbMetaDataStore&lt;/code&gt; component.
-This metadata store can be used in the &lt;code&gt;KinesisMessageDrivenChannelAdapter&lt;/code&gt; for distributed checkpoint management between instances in the cluster.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="sect1"&gt;
-&lt;h2 id="spring-cloud-stream-kinesis-binder"&gt;&lt;a class="anchor" href="#spring-cloud-stream-kinesis-binder"&gt;&lt;/a&gt;Spring Cloud Stream Kinesis Binder&lt;/h2&gt;
-&lt;div class="sectionbody"&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;In addition it&amp;#8217;s my pleasure to announce here that we already have started the AWS Kinesis Binder implementation for Spring Cloud Stream.
-The solution is fully based on the Spring Integration AWS and already has some traction from the community.
-Check its &lt;a href="https://github.com/spring-cloud/spring-cloud-stream-binder-aws-kinesis"&gt;project page&lt;/a&gt; and an appropriate sample in the &lt;a href="https://github.com/spring-cloud/spring-cloud-stream-samples/tree/master/kinesis-produce-consume"&gt;Spring Cloud Samples&lt;/a&gt;!
-Especial thanks to Peter Oates (&lt;a href="https://github.com/oatesp"&gt;@oatesp&lt;/a&gt;) and Jacob Severson (&lt;a href="https://github.com/JacobASeverson"&gt;@JacobASeverson&lt;/a&gt;) for their valuable time and quality contributions!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;The General Availability release for version &lt;code&gt;1.1&lt;/code&gt; is going to happen in a week.
-After that we will switch to the version &lt;code&gt;2.0&lt;/code&gt; based on the Spring Integration &lt;code&gt;5.0&lt;/code&gt; and Spring Cloud AWS &lt;code&gt;2.0&lt;/code&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Of course any feedback is welcome via all available communication channel!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;a href="https://github.com/spring-projects/spring-integration-aws"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-integration-aws/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-integration"&gt;Help&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-integration"&gt;Chat&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Tips: Bootiful JAX-RS</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/10/18/spring-tips-bootiful-jax-rs" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2017-09-27:3041</id>
-    <updated>2017-10-18T01:33:00Z</updated>
-    <content type="html">&lt;p&gt;Speaker: &lt;a href="https://www.twitter.com/starbuxman"&gt;Josh Long&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Hi Spring fans! In this tip, we&amp;rsquo;ll look at how to integrate a Spring Boot application with JAX-RS (using the Jersey reference implementation). JAX-RS is a JCP standard for building REST applications. &lt;/p&gt;
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/deB70lfUJBU" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
   </entry>
 </feed>
