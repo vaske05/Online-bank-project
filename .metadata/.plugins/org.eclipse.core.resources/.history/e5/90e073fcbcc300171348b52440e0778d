@@ -32,10 +32,10 @@ public class User {
 	
 	private boolean enabled = true;
 	
-	@OneToOne //Veza izmedju User-a i P. Account-a 								
+	@OneToOne
 	private PrimaryAccount primaryAccount;
 	
-	@OneToOne //Veza izmedju User-a i S. Account-a
+	@OneToOne
 	private SavingsAccount savingsAccount;
 	
 	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)

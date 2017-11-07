@@ -5,7 +5,41 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2017-11-06T08:48:48Z</updated>
+  <updated>2017-11-07T07:11:07Z</updated>
+  <entry>
+    <title>This Week in Spring - November 7th, 2017</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/11/07/this-week-in-spring-november-7th-2017" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2017-11-07:3089</id>
+    <updated>2017-11-07T07:11:07Z</updated>
+    <content type="html">&lt;p&gt;Hi Spring fans! Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! This week I&amp;rsquo;m in Antwerp, Belgium for the amazing Devoxx (Belgium) event. I&amp;rsquo;m co-presenting with my friends Matt Raible and Mark Heckler on progressive web applications and reactive Spring. I&amp;rsquo;ll be joined by a lot of Pivotal and Spring teammates here so make sure to check the schedule. &lt;/p&gt;
+&lt;p&gt;Later this week I&amp;rsquo;ll be doing a joint &lt;a href="https://objectcomputing.com/products/grails/webinar-grails-3-spring-developers/"&gt;webinar - &lt;em&gt;Grails for the Spring Boot Developer&lt;/em&gt; - with Grails co-founder Jeff Scott Brown&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;Then, it&amp;rsquo;s off to Casablanca, Morocco, for the Devoxx MA event. &lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;re at either event, &lt;a href="http://twitter.com/starbuxman"&gt;don&amp;rsquo;t hesitate to say hi&lt;/a&gt;!&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Spring Cloud Pipelines lead Marcin Grzejszczak &lt;a href="https://spring.io/blog/2017/10/31/spring-cloud-pipelines-1-0-0-m7-released"&gt;just announced Spring Cloud Pipelines 1.0.0.M7&lt;/a&gt;. This new release debuts Kubernetes support for Jenkins and Concourse. It also drastically improves the code coverage with over 150 Bash tests, among other things.&lt;/li&gt;
+  &lt;li&gt;Spring Cloud co-lead Spencer Gibb just announced &lt;a href="https://spring.io/blog/2017/10/31/spring-cloud-finchley-m3-released"&gt;Spring Cloud Finchley M3 is now available&lt;/a&gt;. Spring Cloud Finchley integrates reactive APIs in Spring Framework 5, and introduces a new project called Spring Cloud Gateway.&lt;/li&gt;
+  &lt;li&gt;Spring Security lead Rob Winch &lt;a href="https://spring.io/blog/2017/11/01/spring-security-5-0-0-rc1-released"&gt;just announced Spring Security 5.0.0.RC1&lt;/a&gt;. This release is &lt;em&gt;massive&lt;/em&gt; so you should definitely check the new release, see if the code works for you, right now. It includes, among many other things, integration for Spring Web Flux and Spring Framework 5, OAuth 2.0 integration (directly in Spring Security itself!), password storage updates, UnboundID LDAP in-memory support, and so much more.&lt;/li&gt;
+  &lt;li&gt;Spring Security and Spring Session lead Rob Winch &lt;a href="https://spring.io/blog/2017/11/01/spring-session-2-0-0-rc1-released"&gt;just announced Spring Session 2.0.0.RC1&lt;/a&gt;. The new release puts final touches on the impending 2.0.0.RELEASE by simplifying the integration with the Servlet APIs, and by adding support for a Redis session cleanup cron process.&lt;/li&gt;
+  &lt;li&gt;Spring Integration ninja &lt;a href="https://spring.io/blog/2017/11/01/spring-integration-5-0-release-candidate-1-available"&gt;Artem Bilan just announced Spring Integration 5.0 RC1&lt;/a&gt;. The new release sees - among many other things - 20 issues fixed, HTTP WebFlux-based adapters, and a change in the behavior of the Java DSL to support registering new bean definitions for each component created in the DSL.&lt;/li&gt;
+  &lt;li&gt;Spring Batch lead Michael Minella just &lt;a href="https://spring.io/blog/2017/11/02/spring-batch-4-0-0-rc1-is-now-available"&gt;announced Spring Batch 4.0.0.RC1&lt;/a&gt; which includes updated baseline APIs, new builder APIs, updated Java configuration and documentation. All in all, a worthy upgrade. Those using Spring Boot should get the bits, kick the tires and try it out now.&lt;/li&gt;
+  &lt;li&gt;Spring Boot ninja Stéphane Nicoll &lt;a href="https://spring.io/blog/2017/11/06/spring-boot-2-0-0-m6-available-now"&gt;just announced Spring Boot 2.0.0.M6&lt;/a&gt; which has initial support for HTTP/2, improved support for WebFlux-based applications (adding TLS configuration and error pages), and the first Kotlin integration.&lt;/li&gt;
+  &lt;li&gt;In the latest installment of Spring Tips, I &lt;a href="https://spring.io/blog/2017/11/01/spring-tips-spring-shell"&gt;looked at the Spring Shell project&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;The Thymeleaf &lt;a href="http://forum.thymeleaf.org/Thymeleaf-3-0-9-JUST-PUBLISHED-td4030728.html"&gt;team have just announced Thymeleaf 3.0.9&lt;/a&gt; with improved hit ratios in the &lt;code&gt;StandardCache&lt;/code&gt;, improved restricted expression evaluation mode to support better security, and a few bug fixes for Spring Framework 5 integration.&lt;/li&gt;
+  &lt;li&gt;Pivotal&amp;rsquo;s very own Toshiaki Maki? put together a &lt;em&gt;great&lt;/em&gt; Japanese-language post on using &lt;a href="https://t.co/v9xDg9hs3e?amp=1"&gt;the Pivotal Cloud Foundry metrics forwarder service&lt;/a&gt; to forward metrics from a Spring Boot application to the Pivotal Cloud Foundry Metrics service.&lt;/li&gt;
+  &lt;li&gt;I can&amp;rsquo;t recommend enough &lt;a href="https://www.youtube.com/watch?feature=youtu.be&amp;v=C51hPntRYGY&amp;app=desktop"&gt;this talk&lt;/a&gt; (from &lt;a href="http://twitter.com/SpringDays"&gt;Spring Days Atlanta&lt;/a&gt;) called &amp;ldquo;Spring Didn&amp;rsquo;t Invent It!&amp;rdquo; by &lt;a href="http://twitter.com/lk_moore"&gt;Laura Moore&lt;/a&gt;. I only wish she was able to go on for another few hours! So glad this talk exists.&lt;/li&gt;
+  &lt;li&gt;I join other architects Chris Richardson, Daniel Bryant,&lt;br/&gt;Glenn Engstrand, and Alex Silva for &lt;a href="https://www.infoq.com/articles/vp-microservices-orchestration-choreography"&gt;this InfoQ virtual panel on service orchestration vs. choreography&lt;/a&gt;. It was a lot of fun and I hope you enjoy the discussion.&lt;/li&gt;
+  &lt;li&gt;InfoQ&amp;rsquo;s Amit K Gupta did a nice writeup of the &lt;a href="https://www.infoq.com/news/2017/10/sts-released"&gt;new features in Spring Tool Suite 3.9.1&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;This isn&amp;rsquo;t strictly to do with Spring, but I always enjoy the discussion and introduction of new features in the Java language. This post, by Brian Goetz, is both a wonderful read and an insightful look at &lt;a href="http://cr.openjdk.java.net/~briangoetz/amber/datum.html"&gt;how &amp;ldquo;data classes&amp;rdquo; would work in a future release of Java&lt;/a&gt;. Hat tip to my friend and fellow Java fan Billy Korando for sharing this.&lt;/li&gt;
+  &lt;li&gt;I loved this &lt;a href="https://github.com/sdeleuze/spring-kotlin-functional/tree/boot"&gt;sample project by Spring Framework and Kotlin&lt;/a&gt; ninja Sebastien Deleuze demonstrating some of the APIs in Spring Boot and their Kotlin usage.&lt;/li&gt;
+  &lt;li&gt;the Baeldung blog has a great look at &lt;a href="http://www.baeldung.com/micrometer"&gt;the Micrometer metrics-publishing library&lt;/a&gt;. Micrometer is a Pivotal project that serves as the metrics-backbone for Spring Boot 2.0&amp;rsquo;s Actuator support.&lt;/li&gt;
+  &lt;li&gt;There&amp;rsquo;s a new version of the &lt;a href="http://plugins.netbeans.org/plugin/67888/nb-springboot"&gt;fantastic NetBeans Spring Boot plugin, version 1.6.1&lt;/a&gt;, that supports new hints and quick fixes. It will warn you of use of &lt;code&gt;@ConfigurationProperties&lt;/code&gt; without the presence of &lt;code&gt;spring-boot-configuration-processor&lt;/code&gt;, removal of deprecated or unknown properties, and updates to Spring Boot 1.5.8, among many other things.&lt;/li&gt;
+  &lt;li&gt;You can now &lt;a href="https://twitter.com/snicoll/status/925453128996130816"&gt;use Spring Shell and Spring Cloud Contract&lt;/a&gt; on the Spring Initializr.&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
   <entry>
     <title>Spring Boot 2.0.0 M6 available now</title>
     <link rel="alternate" href="https://spring.io/blog/2017/11/06/spring-boot-2-0-0-m6-available-now" />
@@ -2061,32 +2095,5 @@ Try out the the various testing tools and techniques provided by  Spring Boot, S
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;</content>
-  </entry>
-  <entry>
-    <title>This Week in Spring - October 24th, 2017</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/10/24/this-week-in-spring-october-24th-2017" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2017-10-24:3070</id>
-    <updated>2017-10-24T07:10:22Z</updated>
-    <content type="html">&lt;p&gt;Hi Spring fans! Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! Can you believe we&amp;rsquo;re already staring down the end of October 2017? This year has &lt;em&gt;flown&lt;/em&gt; by! What a rush! This week I&amp;rsquo;m home in sunny San Francisco talking to customers and giving talks. &lt;/p&gt;
-&lt;p&gt;I&amp;rsquo;ll be speaking &amp;ldquo;at&amp;rdquo; the &lt;a href="_URL_"&gt;vJUG 24 online conference&lt;/a&gt;. The conference lasts 24 hours! There&amp;rsquo;s a talk every hour, from as many timezones as possible! I hope you&amp;rsquo;ll join me (and thousands of others) as we look at Reactive Spring at 04:00 GMT on Wednesday.&lt;/p&gt;
-&lt;p&gt;And, of course, I hope you&amp;rsquo;ll register and join my friend and Grails co-founder Jeff Scott Brown and me for a look &lt;a href="https://objectcomputing.com/products/grails/webinar-grails-3-spring-developers/"&gt;at Grails for Spring Developers&lt;/a&gt; on November 9th, 2017.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;In last week&amp;rsquo;s installment of &lt;em&gt;Spring Tips&lt;/em&gt;, &lt;a href="https://spring.io/blog/2017/10/18/spring-tips-bootiful-jax-rs"&gt;I look at how to use JAX-RS, with the Jersey reference implementation, in a Spring Boot 2.0 application&lt;/a&gt; context.&lt;/li&gt;
-  &lt;li&gt;Spring Integration ninja Artem Bilan &lt;a href="https://spring.io/blog/2017/10/19/spring-integration-for-aws-1-1-release-candidate-1-available"&gt;has just announced Spring Integration for AWS 1.1 RC1&lt;/a&gt;. The new release includes a &lt;code&gt;KinesisMessageDrivenChannelAdapter&lt;/code&gt;, a &lt;code&gt;DynamoDbMetaDataStore&lt;/code&gt;, a Spring Cloud Stream Kinesis Binder, and much more. Check it out!&lt;/li&gt;
-  &lt;li&gt;Spring Boot 1.x does &lt;em&gt;not&lt;/em&gt; support Java 9. Spring Boot 2.0, due in December, does. That said, if you want to use Spring Boot 1.x with Java 9, you might &lt;a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-with-Java-9"&gt;appreciate this Wiki page with some gotchas on using Java 9&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;Our very own Richard Seroter has put together a &lt;a href="https://content.pivotal.io/blog/velocity-as-a-service-5-ways-to-ship-like-a-software-company"&gt;great list of five ways to shop software like a software company&lt;/a&gt;, and increase velocity.&lt;/li&gt;
-  &lt;li&gt;I love this issue in Spring Framework wherein Thymeleaf lead Daniel Fernandez sheds a lot of on &lt;a href="https://jira.spring.io/browse/SPR-14981"&gt;how to use Thymeleaf in a Spring WebFlux-based application&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;You can now provision &lt;a href="https://content.pivotal.io/home-page/demand-your-on-demand-rabbitmq-clusters-now"&gt;multi-instance RabbitMQ clusters on demand&lt;/a&gt; with &lt;code&gt;cf create-serivice&lt;/code&gt; on Pivotal Cloud Foundry: hurray!&lt;/li&gt;
-  &lt;li&gt;Andreas Falk has a nice look at how to &lt;a href="https://www.youtube.com/watch?v=QlyslxoTCUA"&gt;manage secrets on Cloud Foundry with, among other things, Spring Cloud Vault&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;Randhir Randhir Singh has put together &lt;a href="https://dzone.com/articles/building-data-pipelines-with-spring-cloud-data-flo"&gt;a nice look at how to build a Spring Cloud Data Flow to build real-time data integration and data processing pipelines&lt;/a&gt; by stitching together Spring Boot applications.&lt;/li&gt;
-  &lt;li&gt;I love this &lt;em&gt;All and Sundry&lt;/em&gt; blog by Biju Kunjummen &lt;a href="http://www.java-allandsundry.com/2017/10/raw-performance-numbers-spring-boot-2.html?m=1"&gt;comparing the performance of Spring Boot 1.0 vs. Spring Boot 2.0&lt;/a&gt;, which of course is based on Spring WebFlux and the Reactor Project. Spoiler alert: the async, non-blocking IO in Spring Boot 2.0 supports &lt;em&gt;many&lt;/em&gt; more demand at SLA levels.&lt;/li&gt;
-  &lt;li&gt;OK, first: this is &lt;em&gt;super&lt;/em&gt; early days, and nothing more than a prototype! But, our very own &lt;a href="https://github.com/viniciusccarvalho/spring-cloud-sockets"&gt;Vinicius Carvalho has put together a &lt;em&gt;prototype&lt;/em&gt; integration for Spring and RSocket&lt;/a&gt;. RSocket is a high performance protocol on top of the Reactive Streams types (and, in particular, it uses Reactor). It enjoys contributions from senior engineers at Facebook, Netflix, and the AEron project, among many others. All this to say, this is &lt;em&gt;really&lt;/em&gt; exciting! But early, yet! (Did I mention that?) It&amp;rsquo;s super early and &lt;em&gt;so&lt;/em&gt; I&amp;rsquo;m sure Vinicius would appreciate any feedback.&lt;/li&gt;
-  &lt;li&gt;I love this amazing example from Spring Framework, reactive Spring and Kotlin ninja Sébastien Deleuze demonstrating &lt;a href="https://github.com/sdeleuze/spring-kotlin-fullstack"&gt;how to use Kotlin for both the front end and back end of an application&lt;/a&gt;. The front-end leverages Kotlin2JS and the backend leverages Kotlin on the JVM (with Spring Boot, natch)&lt;/li&gt;
-  &lt;li&gt;I haven&amp;rsquo;t read this yet, but it does interesting: Ravi Kant Soni has written &lt;a href="https://www.amazon.com/Full-Stack-AngularJS-Java-Developers/dp/148423197X/ref=redir_mobile_desktop/131-1572141-3987769?_encoding=UTF8&amp;dpID=51XPtAmfcFL&amp;dpPl=1&amp;keywords=ravi%20kant%20soni&amp;pi=AC_SX236_SY340_FMwebp_QL65&amp;qid=1508328122&amp;ref=plSrch&amp;ref_=mp_s_a_1_1&amp;sr=8-1"&gt;a book on building Angular applications with Spring Boot&lt;/a&gt;. Check it out.&lt;/li&gt;
-&lt;/ul&gt;</content>
   </entry>
 </feed>
