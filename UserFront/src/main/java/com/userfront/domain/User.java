@@ -38,13 +38,14 @@ public class User {
 	@OneToOne //Veza izmedju User-a i S. Account-a
 	private SavingsAccount savingsAccount;
 	
-	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY) //Veza izmedju User-a i Appontment-a
 	@JsonIgnore
 	private List<Appointment> appointmentList;
 	
-	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY) //Veza izmedju User-a i Recipient-a
 	private List<Recipient> recipientList;
 
+	//Getters and Setters
 	public Long getUserId() {
 		return userId;
 	}

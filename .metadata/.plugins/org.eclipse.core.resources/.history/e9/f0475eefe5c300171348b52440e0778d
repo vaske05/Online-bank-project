@@ -1,0 +1,7 @@
+package com.userfront.service;
+
+public interface UserService {
+	
+	User findByUsername(String username);
+
+}
