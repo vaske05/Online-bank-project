@@ -56,8 +56,5 @@ public class HomeController {
 			userService.save(user);
 			return "redirect:/";
 		}
-		
-		
 	}
-	
 }

@@ -1,0 +1,18 @@
+package com.userfront.domain.security;
+
+import org.springframework.security.config.core.GrantedAuthorityDefaults;
+
+public class Authority implements GrantedAuthority {
+	
+	private final String authority;
+	
+	public Authority(String auth) {
+		this.authority = auth;
+	}
+	
+	@Overide
+	public String getAuthority() {
+		return authority;
+	}
+
+}

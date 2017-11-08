@@ -1,0 +1,7 @@
+package com.userfront.domain.security;
+
+
+@Entity
+public class Role {
+
+}

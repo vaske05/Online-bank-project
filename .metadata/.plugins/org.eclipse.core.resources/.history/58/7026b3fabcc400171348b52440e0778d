@@ -1,0 +1,15 @@
+package com.userfront.domain.security;
+
+import javax.persistence.*;
+
+
+
+@Entity
+public class Role {
+	
+	@Id
+	//@GeneratedValue(strategy = GenerationType.AUTO)
+	private int roleId;
+	
+	private String name;
+}

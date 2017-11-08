@@ -1,0 +1,10 @@
+package com.userfront.domain.security;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="user")
+public class UserRole {
+
+}
