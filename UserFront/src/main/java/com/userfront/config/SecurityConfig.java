@@ -2,16 +2,19 @@ package com.userfront.config;
 
 import java.security.SecureRandom;
 
-import org.apache.tomcat.util.net.openssl.ciphers.Authentication;
+import org.springframework.core.env.Environment; //
+//import org.apache.tomcat.util.net.openssl.ciphers.Authentication;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
-import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.context.annotation.Bean; //
+import org.springframework.context.annotation.Configuration; //
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder; //
+import org.springframework.security.config.annotation.web.builders.HttpSecurity; //
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity; //
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
+
+import com.userfront.service.UserServiceImpl.UserSecurityService;
 
 @Configuration
 @EnableWebSecurity
@@ -19,7 +22,7 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	
 	@Autowired
-	private Enviroment env;
+	private Environment env;
 	
 	@Autowired
 	private UserSecurityService userSecurityService;
