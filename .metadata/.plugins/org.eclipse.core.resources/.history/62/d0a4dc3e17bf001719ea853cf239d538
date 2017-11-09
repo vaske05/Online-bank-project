@@ -1,8 +1,0 @@
-package com.userfront.controller;
-
-
-
-@Controller
-public class HomeController {
-
-}
