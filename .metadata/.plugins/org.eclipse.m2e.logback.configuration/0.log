@@ -1530,3 +1530,5 @@ Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: expected > 
 2017-11-10 21:04:41,056 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2017-11-10 21:04:41,057 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
 2017-11-10 21:04:41,059 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 31 resources
+2017-11-10 21:04:41,086 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-10 21:04:41,086 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Vaske\Desktop\Online Bank\UserFront\src\test\resources

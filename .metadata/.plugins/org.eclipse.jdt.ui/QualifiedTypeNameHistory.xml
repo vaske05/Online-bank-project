@@ -3,4 +3,24 @@
 <fullyQualifiedTypeName name="org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity"/>
 <fullyQualifiedTypeName name="org.springframework.context.annotation.ComponentScan"/>
 <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.config.EnableJpaRepositories"/>
+<fullyQualifiedTypeName name="org.apache.log4j.spi.LoggerFactory"/>
+<fullyQualifiedTypeName name="org.slf4j.LoggerFactory"/>
+<fullyQualifiedTypeName name="com.userfront.service.UserServiceImpl.UserSecurityService"/>
+<fullyQualifiedTypeName name="org.slf4j.Logger"/>
+<fullyQualifiedTypeName name="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
+<fullyQualifiedTypeName name="com.userfront.domain.security.Role"/>
+<fullyQualifiedTypeName name="javax.transaction.Transactional"/>
+<fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
+<fullyQualifiedTypeName name="com.userfront.service.UserService"/>
+<fullyQualifiedTypeName name="java.math.BigDecimal"/>
+<fullyQualifiedTypeName name="com.userfront.DataAccessObject.PrimaryAccountDao"/>
+<fullyQualifiedTypeName name="com.userfront.domain.SavingsAccount"/>
+<fullyQualifiedTypeName name="org.springframework.data.repository.CrudRepository"/>
+<fullyQualifiedTypeName name="com.userfront.domain.PrimaryAccount"/>
+<fullyQualifiedTypeName name="com.userfront.service.AccountService"/>
+<fullyQualifiedTypeName name="java.util.HashSet"/>
+<fullyQualifiedTypeName name="com.userfront.domain.security.UserRole"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="com.userfront.DataAccessObject.RoleDao"/>
 </qualifiedTypeNameHistroy>
