@@ -1,7 +1,0 @@
-package com.userfront.domain.security;
-
-import org.springframework.security.config.core.GrantedAuthorityDefaults;
-
-public class Authority implements GrantedAuthority {
-
-}

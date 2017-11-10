@@ -5,7 +5,103 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2017-11-08T22:11:00Z</updated>
+  <updated>2017-11-10T18:57:17Z</updated>
+  <entry>
+    <title>Spring Cloud Task 2.0.0.M2 is now available</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/11/10/spring-cloud-task-2-0-0-m2-is-now-available" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Glenn Renfro</name>
+    </author>
+    <id>tag:spring.io,2017-11-10:3093</id>
+    <updated>2017-11-10T18:57:17Z</updated>
+    <content type="html">&lt;p&gt;We are pleased to announce that Spring Cloud Task 2.0.0.M2 is now available to download from Spring’s &lt;a href="https://repo.spring.io/libs-milestone-local/org/springframework/cloud/spring-cloud-task-core/2.0.0.M2/"&gt;milestone repository&lt;/a&gt;. Many thanks to all of those who contributed to the release.&lt;/p&gt;
+&lt;p&gt;This release brings Spring Boot 2.0 M5 compatibility. With this upgrade, all dependencies are also upgraded (Spring Cloud, Spring Cloud Stream, Spring Batch, etc).&lt;/p&gt;&lt;h2&gt;&lt;a href="#what-do-you-think" class="anchor" name="what-do-you-think"&gt;&lt;/a&gt;What do you think?&lt;/h2&gt;
+&lt;p&gt;We look forward to your feedback on &lt;a href="https://github.com/spring-cloud/spring-cloud-task/issues"&gt;Github&lt;/a&gt;, &lt;a href="http://stackoverflow.com/tags/spring-cloud-task"&gt;StackOverflow&lt;/a&gt;, &lt;a href="https://gitter.im/spring-cloud/spring-cloud-task"&gt;Gitter&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://cloud.spring.io/spring-cloud-task/"&gt;Spring Cloud Task Home&lt;/a&gt; | &lt;a href="https://github.com/spring-cloud/spring-cloud-task"&gt;Source on GitHub&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-cloud-task/docs/2.0.0.M2/reference/htmlsingle/"&gt;Reference Documentation&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring For Apache Kafka 2.1 RC1 and 2.0.1 &amp; 1.3.1 Available</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/11/09/spring-for-apache-kafka-2-1-rc1-and-2-0-1-1-3-1-available" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Artem Bilan</name>
+    </author>
+    <id>tag:spring.io,2017-11-09:3092</id>
+    <updated>2017-11-09T21:03:53Z</updated>
+    <content type="html">&lt;div class="paragraph"&gt;
+&lt;p&gt;We are pleased to announce the first Release Candidate for the version &lt;code&gt;2.1&lt;/code&gt; of the Spring for Apache Kafka:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;repositories {
+    maven { url 'http://repo.spring.io/milestone' }
+}
+compile "org.springframework.kafka:spring-kafka:2.1.0.RC1"&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The general reason for so quick point release is the &lt;a href="https://kafka.apache.org/downloads"&gt;recently released&lt;/a&gt; Apache Kafka &lt;code&gt;1.0.0&lt;/code&gt; version.
+There are no critical feature in that release, but some breaking changes in the &lt;code&gt;kafka.admin&lt;/code&gt; and &lt;code&gt;kafka.streams&lt;/code&gt; have been introduced.
+Therefore this release represents mostly compatibility with Apache Kafka &lt;code&gt;1.0.0&lt;/code&gt;:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Deprecate &lt;code&gt;bounce()&lt;/code&gt; and &lt;code&gt;waitUntilSynced()&lt;/code&gt; in the &lt;code&gt;KafkaEmbedded&lt;/code&gt; since respective API in the &lt;code&gt;AdminUtils&lt;/code&gt; have been removed&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The &lt;code&gt;KStreamBuilderFactoryBean&lt;/code&gt; now uses &lt;code&gt;StreamsBuilder&lt;/code&gt; instead of deprecated &lt;code&gt;KStreamBuilder&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The &lt;code&gt;@EmbeddedKafka.brokerProperties()&lt;/code&gt; can be configured with the properties placeholders&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The SpEL expressions in the &lt;code&gt;@KafkaListener&lt;/code&gt; attributes now can be used simplified since &lt;code&gt;BeanFactory&lt;/code&gt; resolver is supplied with the &lt;code&gt;TemplateAwareExpressionParser&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A &lt;code&gt;NonResponsiveConsumerEvent&lt;/code&gt; has been introduced to track the sate of the &lt;code&gt;ListenerContainer&lt;/code&gt; for possible target Broker unavailability&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A &lt;code&gt;SeekToCurrentErrorHandler&lt;/code&gt; has been introduced  which allows to &lt;code&gt;seek()&lt;/code&gt; the consumer after an exception&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The version &lt;code&gt;2.1&lt;/code&gt; is a foundation for Kafka auto configuration in the upcoming Spring Boot &lt;code&gt;2.0&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Maintenance version &lt;code&gt;2.0.1&lt;/code&gt; is available and provides some critical bug fixes, compatibility with Apache Kafka &lt;code&gt;1.0.0&lt;/code&gt; and back ported features mentioned for version &lt;code&gt;2.1&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The version &lt;code&gt;1.3.1&lt;/code&gt; has been released mainly to support Apache Kafka &lt;code&gt;1.0.0&lt;/code&gt; and provide critical bug fixes.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;See the &lt;a href="http://projects.spring.io/spring-kafka/"&gt;Project Page&lt;/a&gt; for a complete matrix of &lt;code&gt;spring-kafka&lt;/code&gt;, &lt;code&gt;spring-integration-kafka&lt;/code&gt; and &lt;code&gt;kafka-clients&lt;/code&gt; version compatibility.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;a href="http://projects.spring.io/spring-kafka/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-kafka/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-kafka/blob/master/CONTRIBUTING.adoc"&gt;Contributing&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-kafka"&gt;Help&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-kafka"&gt;Chat&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Cloud Stream Elmhurst.M3 /2.0.0.M3 Release Announcement</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/11/09/spring-cloud-stream-elmhurst-m3-2-0-0-m3-release-announcement" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Oleg Zhurakousky</name>
+    </author>
+    <id>tag:spring.io,2017-11-09:3091</id>
+    <updated>2017-11-09T19:00:19Z</updated>
+    <content type="html">&lt;p&gt;We are pleased to announce the 2.0.0.M3 release of the Spring Cloud Stream Elmhurst release train.&lt;/p&gt;
+&lt;p&gt;Spring Cloud Stream Elmhurst 2.0.0.M3 is available for use in the &lt;a href="http://repo.spring.io/libs-milestone-local/org/springframework/cloud/spring-cloud-stream/2.0.0.M3/"&gt;Spring Milestone&lt;/a&gt; repository. The &lt;a href="https://github.com/spring-cloud/spring-cloud-stream-starters/releases/tag/vElmhurst.M3"&gt;release notes&lt;/a&gt; include relevant information about version compatibility with Spring Boot, Spring Cloud, Spring AMQP, and Spring for Apache Kafka. &lt;/p&gt;
+&lt;p&gt;The following sections list new features and improvements included in this release:&lt;/p&gt;&lt;h3&gt;&lt;a href="#improved-content-type-resolution" class="anchor" name="improved-content-type-resolution"&gt;&lt;/a&gt;Improved Content Type Resolution&lt;/h3&gt;
+&lt;p&gt;The content-type resolution has been improved and consolidated in the &lt;a href="https://docs.spring.io/spring-integration/reference/htmlsingle/#channel-interceptors"&gt;channel interceptors&lt;/a&gt;, which makes it configurable for situations that require application-level customizations. Also, based on the community feedback, we now set the default content-type as &lt;code&gt;application/json&lt;/code&gt;. However, it is still possible to override it via &lt;code&gt;BindingProperties&lt;/code&gt; or it can be passed with the &lt;code&gt;Message&lt;/code&gt; coming from an upstream application.&lt;/p&gt;&lt;h3&gt;&lt;a href="#support-for-apache-kafka-0-11" class="anchor" name="support-for-apache-kafka-0-11"&gt;&lt;/a&gt;Support for Apache Kafka 0.11+&lt;/h3&gt;
+&lt;p&gt;This release comes with full support for Apache Kafka 0.11+ including support for &lt;a href="https://kafka.apache.org/0110/javadoc/index.html?org/apache/kafka/common/header/Headers.html"&gt;native headers&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;While we strongly recommend upgrading your Kafka broker, this release still supports 0.10 Kafka broker, however you’d need to set the &lt;code&gt;headerMode&lt;/code&gt; to either &lt;code&gt;none&lt;/code&gt; or &lt;code&gt;embedded&lt;/code&gt;.&lt;/p&gt;&lt;h3&gt;&lt;a href="#a-note-about-samples" class="anchor" name="a-note-about-samples"&gt;&lt;/a&gt;A note about Samples&lt;/h3&gt;
+&lt;p&gt;As always, great way to learn any new technology or a framework is trying it out and applying it on a use-case. We see a variety of use-cases coming from the community and the customers. To further improve the learning experience, we &lt;a href="https://github.com/spring-cloud/spring-cloud-stream-samples"&gt;continue to add more samples&lt;/a&gt;, and it has had a few new additions recently. Use it or fork it; as well, share your experiences by submitting examples to engage with the broader community. We welcome contributions!&lt;/p&gt;&lt;h4&gt;&lt;a href="#next-steps" class="anchor" name="next-steps"&gt;&lt;/a&gt;Next Steps&lt;/h4&gt;
+&lt;p&gt;We are hoping to get to a stable release-candidate state by &lt;a href="https://springoneplatform.io/"&gt;SpringOne Platform 2017&lt;/a&gt;. Please try it out and give us feedback and do that often!&lt;/p&gt;
+&lt;p&gt;As always, we welcome feedback and contributions, so please reach out to us on &lt;a href="https://stackoverflow.com/questions/tagged/spring-cloud-stream"&gt;Stackoverflow&lt;/a&gt; or &lt;a href="https://github.com/spring-cloud/spring-cloud-stream/"&gt;GitHub&lt;/a&gt; or via &lt;a href="https://gitter.im/spring-cloud/spring-cloud-stream"&gt;Gitter&lt;/a&gt;. &lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Spring Tips: Bootiful Kotlin Redux</title>
     <link rel="alternate" href="https://spring.io/blog/2017/11/08/spring-tips-bootiful-kotlin-redux" />
@@ -1583,307 +1679,5 @@ Be sure to get to &lt;a href="https://springoneplatform.io/"&gt;SpringOne Platfo
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Cloud Edgware.RC1 Released</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/10/25/spring-cloud-edgware-rc1-released" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Spencer Gibb</name>
-    </author>
-    <id>tag:spring.io,2017-10-24:3072</id>
-    <updated>2017-10-25T19:09:37Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the community, I am pleased to announce that the Release Candidate 1 (RC1) of the &lt;a href="https://cloud.spring.io"&gt;Spring Cloud Edgware&lt;/a&gt; Release Train is available today. The release can be found in &lt;a href="https://repo.spring.io/milestone/"&gt;Spring Milestone&lt;/a&gt; repository. You can check out the Edgware &lt;a href="https://github.com/spring-projects/spring-cloud/wiki/Spring-Cloud-Edgware-Release-Notes"&gt;release notes for more information&lt;/a&gt;.&lt;/p&gt;&lt;h2&gt;&lt;a href="#notable-changes-in-the-edgware-release-train" class="anchor" name="notable-changes-in-the-edgware-release-train"&gt;&lt;/a&gt;Notable Changes in the Edgware Release Train&lt;/h2&gt;&lt;h3&gt;&lt;a href="#renamed-starters" class="anchor" name="renamed-starters"&gt;&lt;/a&gt;Renamed starters&lt;/h3&gt;
-&lt;p&gt;A number of starters did not follow normal Spring Cloud naming conventions. In Edgware, use of the deprecated starter will log a warning with the name of the new starter to use in its place. Below is a table of the deprecated starters and their replacements&lt;/p&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Deprecated &lt;/th&gt;
-      &lt;th&gt;Edgware Starter &lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;spring-cloud-starter-archaius &lt;/td&gt;
-      &lt;td&gt;spring-cloud-starter-netflix-archaius &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;spring-cloud-starter-atlas &lt;/td&gt;
-      &lt;td&gt;spring-cloud-starter-netflix-atlas &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;spring-cloud-starter-eureka &lt;/td&gt;
-      &lt;td&gt;spring-cloud-starter-netflix-eureka-client &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;spring-cloud-starter-eureka-server &lt;/td&gt;
-      &lt;td&gt;spring-cloud-starter-netflix-eureka-server &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;spring-cloud-starter-feign &lt;/td&gt;
-      &lt;td&gt;spring-cloud-starter-openfeign &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;spring-cloud-starter-hystrix &lt;/td&gt;
-      &lt;td&gt;spring-cloud-starter-netflix-hystrix &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;spring-cloud-starter-hystrix-dashboard &lt;/td&gt;
-      &lt;td&gt;spring-cloud-starter-netflix-hystrix-dashboard &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;spring-cloud-starter-ribbon &lt;/td&gt;
-      &lt;td&gt;spring-cloud-starter-netflix-ribbon &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;spring-cloud-starter-spectator &lt;/td&gt;
-      &lt;td&gt;spring-cloud-starter-netflix-spectator &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;spring-cloud-starter-turbine &lt;/td&gt;
-      &lt;td&gt;spring-cloud-starter-netflix-turbine &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;spring-cloud-starter-turbine-amqp &lt;/td&gt;
-      &lt;td&gt;DELETED &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;spring-cloud-starter-turbine-stream &lt;/td&gt;
-      &lt;td&gt;spring-cloud-starter-netflix-turbine-stream &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;spring-cloud-starter-zuul &lt;/td&gt;
-      &lt;td&gt;spring-cloud-starter-netflix-zuul &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;&lt;h3&gt;&lt;a href="#spring-cloud-bus" class="anchor" name="spring-cloud-bus"&gt;&lt;/a&gt;Spring Cloud Bus&lt;/h3&gt;
-&lt;p&gt;Updates to allow Bus clients to implement remote events in independent packages.&lt;/p&gt;&lt;h3&gt;&lt;a href="#spring-cloud-task" class="anchor" name="spring-cloud-task"&gt;&lt;/a&gt;Spring Cloud Task&lt;/h3&gt;
-&lt;p&gt;See the &lt;a href="https://spring.io/blog/2017/09/25/spring-cloud-task-1-2-2-release-is-now-available"&gt;release announcement&lt;/a&gt;.&lt;/p&gt;&lt;h3&gt;&lt;a href="#spring-cloud-netflix" class="anchor" name="spring-cloud-netflix"&gt;&lt;/a&gt;Spring Cloud Netflix&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;@EnableDiscoveryClient&lt;/code&gt; is now optional. Including &lt;code&gt;spring-cloud-starter-netflix&lt;/code&gt; will automatically assume the application should register and be a discovery client. To disable auto-registration set &lt;code&gt;spring.cloud.service-registry.auto-registration.enabled=false&lt;/code&gt;. Hystrix and Eureka Server are now tested via Spring Cloud Contract.&lt;/p&gt;&lt;h3&gt;&lt;a href="#spring-cloud-consul" class="anchor" name="spring-cloud-consul"&gt;&lt;/a&gt;Spring Cloud Consul&lt;/h3&gt;
-&lt;p&gt;Consul DiscoveryClient now supports a datacenter parameter. HTTPS checks with self-signed certificates are now supported.&lt;/p&gt;&lt;h3&gt;&lt;a href="#spring-cloud-contract" class="anchor" name="spring-cloud-contract"&gt;&lt;/a&gt;Spring Cloud Contract&lt;/h3&gt;
-&lt;p&gt;Wiremock has been updated and custom extensions are now supported. URL segments can now be referenced in body response verification.&lt;/p&gt;&lt;h3&gt;&lt;a href="#spring-cloud-sleuth" class="anchor" name="spring-cloud-sleuth"&gt;&lt;/a&gt;Spring Cloud Sleuth&lt;/h3&gt;
-&lt;p&gt;Zipkin 2 support has been added along with numerous minor enhancements.&lt;/p&gt;&lt;h3&gt;&lt;a href="#spring-cloud-stream" class="anchor" name="spring-cloud-stream"&gt;&lt;/a&gt;Spring Cloud Stream&lt;/h3&gt;
-&lt;p&gt;See the &lt;a href="https://spring.io/blog/2017/10/06/spring-cloud-stream-1-3-goes-ga"&gt;release annoucement&lt;/a&gt;;&lt;/p&gt;&lt;h3&gt;&lt;a href="#spring-cloud-config" class="anchor" name="spring-cloud-config"&gt;&lt;/a&gt;Spring Cloud Config&lt;/h3&gt;
-&lt;p&gt;A new JDBC &lt;code&gt;EnvironmentRepository&lt;/code&gt; was created.&lt;/p&gt;&lt;h3&gt;&lt;a href="#spring-cloud-zookeeper" class="anchor" name="spring-cloud-zookeeper"&gt;&lt;/a&gt;Spring Cloud Zookeeper&lt;/h3&gt;
-&lt;p&gt;The ability to set the instance ID was added.&lt;/p&gt;&lt;h3&gt;&lt;a href="#spring-cloud-commons" class="anchor" name="spring-cloud-commons"&gt;&lt;/a&gt;Spring Cloud Commons&lt;/h3&gt;
-&lt;p&gt;As mentioned above, &lt;code&gt;@EnableDiscoveryClient&lt;/code&gt; is now optional.&lt;/p&gt;
-&lt;p&gt;The following modules were updated as part of Edgware.RC1:&lt;/p&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Module &lt;/th&gt;
-      &lt;th&gt;Version &lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Spring Cloud Bus &lt;/td&gt;
-      &lt;td&gt;1.3.2.RC1 &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Spring Cloud Task &lt;/td&gt;
-      &lt;td&gt;1.2.2.RELEASE &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Spring Cloud Netflix &lt;/td&gt;
-      &lt;td&gt;1.4.0.RC1 &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Spring Cloud Consul &lt;/td&gt;
-      &lt;td&gt;1.3.0.RC1 &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Spring Cloud Contract &lt;/td&gt;
-      &lt;td&gt;1.2.0.RC1 &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Spring Cloud Sleuth &lt;/td&gt;
-      &lt;td&gt;1.3.0.RC1 &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Spring Cloud Stream &lt;/td&gt;
-      &lt;td&gt;Ditmars.RELEASE &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Spring Cloud Dependencies &lt;/td&gt;
-      &lt;td&gt;1.3.5.RELEASE &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Spring Cloud Aws &lt;/td&gt;
-      &lt;td&gt;1.2.2.RC1 &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Spring Cloud Config &lt;/td&gt;
-      &lt;td&gt;1.4.0.RC1 &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Spring Boot &lt;/td&gt;
-      &lt;td&gt;1.5.6.RELEASE &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Spring Cloud Zookeeper &lt;/td&gt;
-      &lt;td&gt;1.2.0.RC1 &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Spring Cloud Gateway &lt;/td&gt;
-      &lt;td&gt;1.0.0.RC1 &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Spring Cloud Cloudfoundry &lt;/td&gt;
-      &lt;td&gt;1.1.0.RELEASE &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Spring Cloud Commons &lt;/td&gt;
-      &lt;td&gt;1.3.0.RC1 &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Spring Boot Dependencies &lt;/td&gt;
-      &lt;td&gt;1.5.6.RELEASE &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Spring Cloud Build &lt;/td&gt;
-      &lt;td&gt;1.3.5.RELEASE &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Spring Boot Starter &lt;/td&gt;
-      &lt;td&gt;1.5.6.RELEASE &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Spring Cloud Security &lt;/td&gt;
-      &lt;td&gt;1.2.1.RELEASE &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Spring Cloud Vault &lt;/td&gt;
-      &lt;td&gt;1.1.0.RC1 &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;As always, we welcome feedback on &lt;a href="https://github.com/spring-cloud/"&gt;GitHub&lt;/a&gt;, on &lt;a href="https://gitter.im/spring-cloud/spring-cloud"&gt;Gitter&lt;/a&gt;, on &lt;a href="http://stackoverflow.com/questions/tagged/spring-cloud"&gt;Stack Overflow&lt;/a&gt;, or on &lt;a href="https://twitter.com/SpringCloud"&gt;Twitter&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;To get started with Maven with a BOM (dependency management only):&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint"&gt;&amp;lt;repositories&amp;gt;&#xD;
-    &amp;lt;repository&amp;gt;&#xD;
-        &amp;lt;id&amp;gt;spring-milestones&amp;lt;/id&amp;gt;&#xD;
-        &amp;lt;name&amp;gt;Spring Milestones&amp;lt;/name&amp;gt;&#xD;
-        &amp;lt;url&amp;gt;http://repo.spring.io/milestone&amp;lt;/url&amp;gt;&#xD;
-        &amp;lt;snapshots&amp;gt;&#xD;
-            &amp;lt;enabled&amp;gt;false&amp;lt;/enabled&amp;gt;&#xD;
-        &amp;lt;/snapshots&amp;gt;&#xD;
-    &amp;lt;/repository&amp;gt;&#xD;
-&amp;lt;/repositories&amp;gt;&#xD;
-&amp;lt;dependencyManagement&amp;gt;&#xD;
-    &amp;lt;dependencies&amp;gt;&#xD;
-        &amp;lt;dependency&amp;gt;&#xD;
-            &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;&#xD;
-            &amp;lt;artifactId&amp;gt;spring-cloud-dependencies&amp;lt;/artifactId&amp;gt;&#xD;
-            &amp;lt;version&amp;gt;Edgware.RC1&amp;lt;/version&amp;gt;&#xD;
-            &amp;lt;type&amp;gt;pom&amp;lt;/type&amp;gt;&#xD;
-            &amp;lt;scope&amp;gt;import&amp;lt;/scope&amp;gt;&#xD;
-        &amp;lt;/dependency&amp;gt;&#xD;
-    &amp;lt;/dependencies&amp;gt;&#xD;
-&amp;lt;/dependencyManagement&amp;gt;&#xD;
-&amp;lt;dependencies&amp;gt;&#xD;
-    &amp;lt;dependency&amp;gt;&#xD;
-        &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;&#xD;
-        &amp;lt;artifactId&amp;gt;spring-cloud-starter-config&amp;lt;/artifactId&amp;gt;&#xD;
-    &amp;lt;/dependency&amp;gt;&#xD;
-    &amp;lt;dependency&amp;gt;&#xD;
-        &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;&#xD;
-        &amp;lt;artifactId&amp;gt;spring-cloud-starter-netflix-eureka-client&amp;lt;/artifactId&amp;gt;&#xD;
-    &amp;lt;/dependency&amp;gt;&#xD;
-    ...&#xD;
-&amp;lt;/dependencies&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;or with Gradle:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint"&gt;buildscript {&#xD;
-    dependencies {&#xD;
-        classpath &amp;quot;io.spring.gradle:dependency-management-plugin:1.0.2.RELEASE&amp;quot;&#xD;
-    }&#xD;
-}&#xD;
-&#xD;
-repositories {&#xD;
-    maven {&#xD;
-        url &amp;#39;http://repo.spring.io/milestone&amp;#39;&#xD;
-    }&#xD;
-}&#xD;
-&#xD;
-apply plugin: &amp;quot;io.spring.dependency-management&amp;quot;&#xD;
-&#xD;
-dependencyManagement {&#xD;
-    imports {&#xD;
-        mavenBom &amp;#39;org.springframework.cloud:spring-cloud-dependencies:Edgware.RC1&amp;#39;&#xD;
-    }&#xD;
-}&#xD;
-&#xD;
-dependencies {&#xD;
-    compile &amp;#39;org.springframework.cloud:spring-cloud-starter-config&amp;#39;&#xD;
-    compile &amp;#39;org.springframework.cloud:spring-cloud-starter-netflix-eureka-client&amp;#39;&#xD;
-    ...&#xD;
-}
-&lt;/code&gt;&lt;/pre&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Tips:  Spring Cloud Contract (HTTP)</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/10/25/spring-tips-spring-cloud-contract-http" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2017-09-27:3042</id>
-    <updated>2017-10-25T01:40:00Z</updated>
-    <content type="html">&lt;p&gt;Speaker: &lt;a href="https://www.twitter.com/starbuxman"&gt;Josh Long&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Hi Spring fans! In this tip, we&amp;rsquo;ll look at how to get fast-feedback &lt;em&gt;and&lt;/em&gt; do integration testing with Spring Cloud Contract. In this video, we&amp;rsquo;ll focus on HTTP-based services.&lt;/p&gt;
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/Ki54FB2B25U" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Batch 4.0.0.M5 is now available</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/10/24/spring-batch-4-0-0-m5-is-now-available" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Michael Minella</name>
-    </author>
-    <id>tag:spring.io,2017-10-24:3073</id>
-    <updated>2017-10-24T22:52:00Z</updated>
-    <content type="html">&lt;p&gt;We are pleased to announce that Spring Batch 4.0.0.M5 is now available via Github and the Pivotal download repository. This release represents the fifth milestone for the Spring Batch 4.0 release. Many thanks to all that contributed to this release.&lt;/p&gt;&lt;h2&gt;&lt;a href="#what-rsquo-s-new" class="anchor" name="what-rsquo-s-new"&gt;&lt;/a&gt;What&amp;rsquo;s new?&lt;/h2&gt;
-&lt;p&gt;This milestone continues the work laid out in the previous 4.0.0 milestones. Specific updates include:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Dependency updates&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;FunctionItemProcessor&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Continued updates to documentation&lt;/li&gt;
-&lt;/ul&gt;&lt;h2&gt;&lt;a href="#dependency-updates" class="anchor" name="dependency-updates"&gt;&lt;/a&gt;Dependency updates&lt;/h2&gt;
-&lt;p&gt;As the dependency graph of Spring Boot 2 evolves, we have been updating our dependencies to be in line with them. This round includes updates to pull in the GA release of Spring Framework 5 as well as Spring Data Kay. Spring Integration 5.0.0.M7 was also pulled in for this release.&lt;/p&gt;&lt;h2&gt;&lt;a href="#code-functionitemprocessor-code" class="anchor" name="code-functionitemprocessor-code"&gt;&lt;/a&gt;&lt;code&gt;FunctionItemProcessor&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;With Java 8 and the introduction of functional interfaces (from the &lt;code&gt;java.util.function&lt;/code&gt; package), it makes sense to review how those interfaces map into Spring Batch. The three key interfaces consist of the &lt;code&gt;Supplier&lt;/code&gt;, &lt;code&gt;Function&lt;/code&gt;, and &lt;code&gt;Consumer&lt;/code&gt;. This release provides an &lt;code&gt;ItemProcessor&lt;/code&gt; and related capabilities to enable the use of a &lt;code&gt;Function&lt;/code&gt; as an &lt;code&gt;ItemProcessor&lt;/code&gt;. An example may look something like this:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint"&gt;...&#xD;
-@Bean&#xD;
-public Function&amp;lt;String, String&amp;gt; upperCaseFunction() {&#xD;
-	return o -&amp;gt; o.toUpperCase();&#xD;
-}&#xD;
-&#xD;
-@Bean&#xD;
-public Step step1() {&#xD;
-	return this.stepBuilderFactory.get(&amp;quot;step1&amp;quot;)&#xD;
-				.&amp;lt;String, String&amp;gt;chunk(10)&#xD;
-				.reader(reader())&#xD;
-				.processor(upperCaseFunction())&#xD;
-				.writer(writer())&#xD;
-				.build();&#xD;
-}&#xD;
-...
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Note that in the previous example, the actual Function implementation has zero Spring Batch dependencies. I can create a processor implementation that does not actually implement &lt;code&gt;ItemProcessor&lt;/code&gt; and use it as a processor within my step[1].&lt;/p&gt;
-&lt;p&gt;Between now and GA for Spring Batch, we&amp;rsquo;ll begin to look at the other functional interfaces and their applicibility to Spring Batch.&lt;/p&gt;&lt;h2&gt;&lt;a href="#updates-to-documentation" class="anchor" name="updates-to-documentation"&gt;&lt;/a&gt;Updates to documentation&lt;/h2&gt;
-&lt;p&gt;The Spring Batch documentation hasn&amp;rsquo;t had a major overhaul since java configuration became the norm. This release begins the transition of the documentation to address that. You&amp;rsquo;ll see at the top of the following pages a toggle between Java and XML. That toggle will indicate how the examples within that page are configured (via Java based configuration or XML based configuration respectively). The pages this is currently implemented on are:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Spring Batch Introduction&lt;/li&gt;
-  &lt;li&gt;The Domain of Batch&lt;/li&gt;
-  &lt;li&gt;Configuring and Running a Job&lt;/li&gt;
-  &lt;li&gt;Configuring a Step&lt;/li&gt;
-  &lt;li&gt;Readers and Writers&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Before our next release we&amp;rsquo;ll finish this migration to allow for ever example within the Spring Batch reference documentation to be illustrated both via Java configuration as well as XML configuration.&lt;/p&gt;&lt;h2&gt;&lt;a href="#what-rsquo-s-next" class="anchor" name="what-rsquo-s-next"&gt;&lt;/a&gt;What&amp;rsquo;s next?&lt;/h2&gt;
-&lt;p&gt;Looking ahead we&amp;rsquo;ll be wrapping up the documentation updates. We&amp;rsquo;ll also be looking at how the other functional interfaces fit into Spring Batch. Finally we&amp;rsquo;ll pick up the rest of the Spring Framework ecosystem&amp;rsquo;s latest dependencies in preparation for the GA release.&lt;/p&gt;&lt;h2&gt;&lt;a href="#what-happened-to-spring-batch-4-0-0-m4" class="anchor" name="what-happened-to-spring-batch-4-0-0-m4"&gt;&lt;/a&gt;What happened to Spring Batch 4.0.0.M4?&lt;/h2&gt;
-&lt;p&gt;Spring Batch 4.0.0.M4 was released last Friday with an error in it and is not recommend for general consumption. 4.0.0.M5 is the latest milestone recommended to be consumed.&lt;/p&gt;&lt;h2&gt;&lt;a href="#what-do-you-think" class="anchor" name="what-do-you-think"&gt;&lt;/a&gt;What do you think?&lt;/h2&gt;
-&lt;p&gt;We look forward to your feedback on these new features in &lt;a href="https://jira.spring.io/browse/BATCH/"&gt;Jira&lt;/a&gt;, &lt;a href="https://stackoverflow.com/tags/spring-batch"&gt;StackOverflow&lt;/a&gt;, or to me directly via Twitter &lt;a href="https://twitter.com/michaelminella"&gt;@michaelminella&lt;/a&gt;!&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://projects.spring.io/spring-batch/"&gt;Spring Batch Home&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-batch"&gt;Source on GitHub&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-batch/4.0.x/reference/html/index.html"&gt;Reference Documentation&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;[1] Note: We are aware of the &lt;code&gt;ItemProcessorAdapter&lt;/code&gt; that existed and that it provided another way to accomplish using a service not implementing &lt;code&gt;ItemProcessor&lt;/code&gt; as an &lt;code&gt;ItemProcessor&lt;/code&gt;.&lt;/p&gt;</content>
   </entry>
 </feed>

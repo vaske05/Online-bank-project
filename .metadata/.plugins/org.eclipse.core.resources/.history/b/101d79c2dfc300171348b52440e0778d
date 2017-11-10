@@ -1,5 +1,0 @@
-package com.userfront;
-
-public interface UserDao {
-
-}

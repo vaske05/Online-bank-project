@@ -2,12 +2,13 @@ package com.userfront.config;
 
 import java.security.SecureRandom;
 
-import org.springframework.core.env.Environment; //
 //import org.apache.tomcat.util.net.openssl.ciphers.Authentication;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean; //
 import org.springframework.context.annotation.Configuration; //
+import org.springframework.core.env.Environment; //
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder; //
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity; //
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity; //
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
@@ -18,7 +19,7 @@ import com.userfront.service.UserServiceImpl.UserSecurityService;
 
 @Configuration
 @EnableWebSecurity
-
+@EnableGlobalMethodSecurity(prePostEnabled=true)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	
 	@Autowired
@@ -26,6 +27,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	
 	@Autowired
 	private UserSecurityService userSecurityService;
+	
 	
 	private static final String SALT = "salt"; //Salt should be protected carefully( salt koristimo za enk. i dek. sifre)
 	
@@ -53,7 +55,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		http.authorizeRequests()./*antMatchers("/**").*/antMatchers(PUBLIC_MATCHERS).permitAll().anyRequest().authenticated();
 		
 		http
-				.csrf().disable().cors().disable()
+				.csrf().disable()
 				.formLogin().failureUrl("/index?error").defaultSuccessUrl("/userFront").loginPage("/index").permitAll()
 				.and()
 				.logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout")).logoutSuccessUrl("/index?logout").deleteCookies("remember-me").permitAll()

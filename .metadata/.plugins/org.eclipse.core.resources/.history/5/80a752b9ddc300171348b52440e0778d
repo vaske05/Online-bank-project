@@ -1,6 +1,0 @@
-package com.userfront.service;
-
-@Service
-public class UserServiceImpl implements UserService {
-
-}
