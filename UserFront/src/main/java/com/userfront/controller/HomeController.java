@@ -16,7 +16,6 @@ import com.userfront.domain.security.UserRole;
 import com.userfront.service.UserService;
 
 
-
 @Controller
 public class HomeController {
 	
