@@ -5,7 +5,40 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2017-11-10T18:57:17Z</updated>
+  <updated>2017-11-14T19:26:53Z</updated>
+  <entry>
+    <title>This Week in Spring - November 14th 2017</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/11/14/this-week-in-spring-november-14th-2017" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2017-11-14:3094</id>
+    <updated>2017-11-14T19:26:53Z</updated>
+    <content type="html">&lt;p&gt;Hi Spring fans! Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! This week I am in Casablanca, Morocco for the amazing Devoxx Morocco event talking to developers in the hub of North Africa. &lt;/p&gt;
+&lt;p&gt;Can you believe it&amp;rsquo;s already the middle of November? And can you believe we are less than a month away from the &lt;a href="https://springoneplatform.io/"&gt;amazing SpringOne Platform&lt;/a&gt; event in San Francisco, CA? I hope you&amp;rsquo;re going!&lt;/p&gt;
+&lt;p&gt;Now, without further ado, let&amp;rsquo;s get to it.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Spring messaging ninja Oleg Zhurakousky just announced &lt;a href="https://spring.io/blog/2017/11/09/spring-cloud-stream-elmhurst-m3-2-0-0-m3-release-announcement"&gt;Spring Cloud Stream Elmhurst.M3 / 2.0.0.M3&lt;/a&gt;. The new release improves content-type resolution, support for Apache Kafka 0.11+, and introduces a good deal of nice samples.&lt;/li&gt;
+  &lt;li&gt;Spring Data Geode/GemFire lead John Blum &lt;a href="https://spring.io/blog/2017/11/07/spring-session-data-geode-gemfire-2-0-0-rc1-available"&gt;just announced Spring Data Geode / GemFire 2.0.0.RC1&lt;/a&gt;. The new release updates dependencies, builds on Java 8 (introducing Java 8 types and lambdas), and introduces new samples.&lt;/li&gt;
+  &lt;li&gt;In this last week&amp;rsquo;s installment of &lt;em&gt;Spring Tips&lt;/em&gt; &lt;a href="https://spring.io/blog/2017/11/08/spring-tips-bootiful-kotlin-redux"&gt;I revisit Kotlin and Spring&lt;/a&gt;, looking at some of the DSLs available in Spring and their use. This one&amp;rsquo;s been a long time in coming and it&amp;rsquo;s wonderful to see how far things have come!&lt;/li&gt;
+  &lt;li&gt;Spring messaging ninja Artem Bilan &lt;a href="https://spring.io/blog/2017/11/09/spring-for-apache-kafka-2-1-rc1-and-2-0-1-1-3-1-available"&gt;just announced Spring for Apache Kafka 2.1RC1 and 2.0.1 and 1.3.1&lt;/a&gt; which - mainly - introduces support for Apache Kafka 1.0.&lt;/li&gt;
+  &lt;li&gt;Spring Cloud Task contributor &lt;a href="https://spring.io/blog/2017/11/10/spring-cloud-task-2-0-0-m2-is-now-available"&gt;Glenn Renfro just announced Spring Cloud Task 2.0.0.M2&lt;/a&gt;. This release updates the code to be compatible with Spring Boot 2.0.0.M5 (and all the other downstream dependencies that depend on it).&lt;/li&gt;
+  &lt;li&gt;This Devoxx BE talk on &lt;a href="https://www.youtube.com/watch?v=_DkvVtDPiFM&amp;list=PLRsbF2sD7JVqZ4RpHYkqSuCNhxumGP5eo&amp;index=109"&gt;consumer driven contract testing with Spring Cloud Contract&lt;/a&gt; by Ben Ooms looks interesting&lt;/li&gt;
+  &lt;li&gt;I happen to know that this talk by Keycloak contributor Sebastien Blanc &lt;a href="https://www.youtube.com/watch?v=3I4TXPxCCVE&amp;list=PLRsbF2sD7JVqZ4RpHYkqSuCNhxumGP5eo&amp;index=81"&gt;on using Spring Boot and RedHat&amp;rsquo;s Keycloak&lt;/a&gt; OAuth identity provider is worth a watch.&lt;/li&gt;
+  &lt;li&gt;Spring Framework and Spring co-founder Juergen Hoeller gave a great talk at Devoxx Belgium &lt;a href="https://www.youtube.com/watch?v=69tJKcmKVQk&amp;list=PLRsbF2sD7JVqZ4RpHYkqSuCNhxumGP5eo&amp;index=72"&gt;introducing Spring Framework 5 themes and trends&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;I also had fun co-presenting with my buddy Mark Heckler &lt;a href="https://www.youtube.com/watch?v=yAXgkSlrmBA&amp;list=PLRsbF2sD7JVqZ4RpHYkqSuCNhxumGP5eo&amp;index=64"&gt;on building reactive Spring applications at Devoxx BE&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;This talk by Spring team legend Thomas Risberg &lt;a href="https://www.youtube.com/watch?v=EerHub6PoEA&amp;list=PLRsbF2sD7JVqZ4RpHYkqSuCNhxumGP5eo&amp;index=60"&gt;on how to build Spring Boot applications on Kubernetes&lt;/a&gt; is defnitely worth watching.&lt;/li&gt;
+  &lt;li&gt;I had a lot of fun presenting at Devoxx BE with my buddy and Okta Developer Advocate Matt Raible in this talk called &lt;a href="https://www.youtube.com/watch?v=tCyLDzhz_mg&amp;list=PLRsbF2sD7JVqZ4RpHYkqSuCNhxumGP5eo&amp;index=51"&gt;Building Cloud Native Progressive Web Apps&lt;/a&gt;. In it we look at using Spring Boot, Spring Cloud and Kotlin to build a robust microservices-based backend and then we build a TypeScript-based Angular client to talk to that microservices system.&lt;/li&gt;
+  &lt;li&gt;This looks interesting - it&amp;rsquo;s a Devoxx BE talk by Arne Vandamme and Steven Gentens on building web applications using something called &lt;a href="https://www.youtube.com/watch?v=00Jn3d12L2M&amp;list=PLRsbF2sD7JVqZ4RpHYkqSuCNhxumGP5eo&amp;index=40"&gt;the Across Platform (with Spring)&lt;/a&gt;. I&amp;rsquo;ve got it bookmarked!&lt;/li&gt;
+  &lt;li&gt;You should definitely check out this talk on &lt;a href="https://www.youtube.com/watch?v=LQN2ptVdaJE&amp;list=PLRsbF2sD7JVqZ4RpHYkqSuCNhxumGP5eo&amp;index=38"&gt;Spring Framework 5 hidden gems&lt;/a&gt; by Spring Framework lead Juergen Hoeller&lt;/li&gt;
+  &lt;li&gt;I &lt;em&gt;love&lt;/em&gt; this Devoxx BE talk by Kotlin and Spring ninja Se?bastien Deleuze on, well, &lt;a href="https://www.youtube.com/watch?v=kbMXAjWEft0&amp;list=PLRsbF2sD7JVqZ4RpHYkqSuCNhxumGP5eo&amp;index=36"&gt;Spring Boot and Kotlin&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;This Devoxx BE talk by Spring teammembers Stephane Nicoll and Brian Clozel on &lt;a href="https://www.youtube.com/watch?v=Q-9bUsrLVpI&amp;list=PLRsbF2sD7JVqZ4RpHYkqSuCNhxumGP5eo&amp;index=5"&gt;building Spring Boot 2.0 web applications&lt;/a&gt; is a must-watch!&lt;/li&gt;
+  &lt;li&gt;I really liked this Devoxx BE talk by Jisha Abubaker on Google&amp;rsquo;s developer relations engineering team. In it she looks at &lt;a href="https://www.youtube.com/watch?v=-pMxdcfWrhs&amp;list=PLRsbF2sD7JVqZ4RpHYkqSuCNhxumGP5eo&amp;index=22"&gt;using some of the Google Cloud Spring Boot starters&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;This post is interesting - Hibernate Developer Advocate Vlad Mihalcea looks at how to &lt;a href="https://vladmihalcea.com/2017/11/14/how-to-emulate-createdby-and-lastmodifiedby-from-spring-data-using-the-generatortype-hibernate-annotation/amp/"&gt;simulate Spring Data&amp;rsquo;s &lt;code&gt;@CreatedBy&lt;/code&gt; and &lt;code&gt;@LastModifiedBy&lt;/code&gt; with straight Hibernate&lt;/a&gt;. Interesting.. but why not just use Hibernate &lt;em&gt;and&lt;/em&gt; Spring Data JPA? N&amp;rsquo;er a more natural pair was there :)&lt;/li&gt;
+  &lt;li&gt;This has zero things to do with Spring, but I&amp;rsquo;m honored to have been included &lt;a href="https://www.pearsonfrank.com/blog/20-java-professionals-need-follow-twitter"&gt;in this a list of twenty Java developers you should follow on Twitter&lt;/a&gt;. If you want to &lt;a href="http://twitter.com/starbuxman"&gt;follow l&amp;rsquo;il &amp;rsquo;ol me&lt;/a&gt;, I&amp;rsquo;d appreciate it, but you should &lt;em&gt;definitely&lt;/em&gt; follow some of the rest of the folks on that list. Most of them are friends and I can&amp;rsquo;t recommend &amp;rsquo;em highly enough.&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
   <entry>
     <title>Spring Cloud Task 2.0.0.M2 is now available</title>
     <link rel="alternate" href="https://spring.io/blog/2017/11/10/spring-cloud-task-2-0-0-m2-is-now-available" />
@@ -1484,200 +1517,5 @@ users.toFlux()&#xD;
 &lt;p&gt;We are now working on &lt;code&gt;0.7.2.RELEASE&lt;/code&gt; and the following &lt;code&gt;0.8.0&lt;/code&gt;. We still have on-going investigations and we are processing a wave of new feedbacks thanks to the final Spring Framework release popularity. &lt;code&gt;0.8&lt;/code&gt; aims to build on this maturity and delivers a major API quality improvement.&lt;/p&gt;&lt;h1&gt;&lt;a href="#what-happened-to-sr1-and-sr2" class="anchor" name="what-happened-to-sr1-and-sr2"&gt;&lt;/a&gt;What happened to SR1 and SR2?!&lt;/h1&gt;
 &lt;p&gt;Unfortunately we suffered twice from a POM generation issue, while these versions exist in Maven Central, they both present a defect with the definition for &lt;code&gt;reactor-extra&lt;/code&gt;. Please refrain from using the &lt;code&gt;Bismuth-SR1&lt;/code&gt; and &lt;code&gt;Bismuth-SR2&lt;/code&gt; BOMs as well as &lt;code&gt;reactor-extra:3.1.1.RELEASE&lt;/code&gt;. Fingers crossed the next version should be &lt;code&gt;Bismuth-SR4&lt;/code&gt; prior to Spring Framework &lt;code&gt;5.0.2&lt;/code&gt;.&lt;/p&gt;&lt;h1&gt;&lt;a href="#see-you-soon" class="anchor" name="see-you-soon"&gt;&lt;/a&gt;See you soon ?&lt;/h1&gt;
 &lt;p&gt;If you are interested in all the new bits and our next plans, the full team will be at &lt;a href="https://springoneplatform.io"&gt;Spring One Platform&lt;/a&gt; and a &lt;a href="https://springoneplatform.io/sessions/project-reactor-now-and-tomorrow"&gt;dedicated session is planned&lt;/a&gt;. In addition, Reactive programming with Reactor will be covered by most of the Spring tracks !&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>$ diff -q spring-data-gemfire spring-data-geode</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/10/26/diff-q-spring-data-gemfire-spring-data-geode" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>John Blum</name>
-    </author>
-    <id>tag:spring.io,2017-10-06:3056</id>
-    <updated>2017-10-26T15:54:25Z</updated>
-    <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;Greetings Spring Community and Pivotal GemFire/Apache Geode Users-&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;One question I constantly get asked is, "&lt;em&gt;What is the difference between Spring Data GemFire and Spring Data Geode?&lt;/em&gt;"&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Now that &lt;em&gt;Spring Data Geode&lt;/em&gt; is part of the &lt;em&gt;Spring Data Release Train&lt;/em&gt;, beginning with &lt;a href="https://github.com/spring-projects/spring-data-commons/wiki/Release-Train-Kay#participating-modules"&gt;&lt;em&gt;Kay&lt;/em&gt;&lt;/a&gt; (see the &lt;a href="https://spring.io/blog/2017/10/02/spring-data-release-train-kay-goes-ga"&gt;official release announcement&lt;/a&gt; for more details), the timing is finally right to answer this question in an open forum.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;To help answer this question, I set 2 simple objectives for both &lt;em&gt;Spring Data GemFire&lt;/em&gt; and &lt;em&gt;Spring Data Geode&lt;/em&gt; (collectively known as SDG^2 now):&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="olist arabic"&gt;
-&lt;ol class="arabic"&gt;
-&lt;li&gt;
-&lt;p&gt;First, and most importantly, allow users to seamlessly interchange &lt;em&gt;Spring Data Geode&lt;/em&gt; with &lt;em&gt;Spring Data GemFire&lt;/em&gt;, and vice versa.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Next, help users migrate their &lt;em&gt;Spring Boot&lt;/em&gt;, Pivotal GemFire or Apache Geode based applications from their local development environment to a managed environment, like &lt;a href="https://pivotal.io/platform"&gt;Pivotal CloudFoundry&lt;/a&gt;, with little to no code changes at all.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Let&amp;#8217;s take a look at each of these objectives a bit closer and what they mean.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="sect1"&gt;
-&lt;h2 id="interchangeable-dependencies"&gt;&lt;a class="anchor" href="#interchangeable-dependencies"&gt;&lt;/a&gt;Interchangeable Dependencies&lt;/h2&gt;
-&lt;div class="sectionbody"&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;The first objective is all about &lt;em&gt;choice&lt;/em&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;It simply means that a user can switch from &lt;code&gt;spring-data-geode&lt;/code&gt; to &lt;code&gt;spring-data-gemfire&lt;/code&gt; and expect &lt;strong&gt;not&lt;/strong&gt; to have to change a single line of code in her &lt;em&gt;Spring Boot&lt;/em&gt; application that is using either Pivotal GemFire or Apache Geode.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Simply change the &lt;em&gt;dependency declaration&lt;/em&gt; from this&amp;#8230;&amp;#8203;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="title"&gt;Maven&lt;/div&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;&amp;lt;dependency&amp;gt;
-  &amp;lt;groupId&amp;gt;org.springframework.data&amp;lt;/groupId&amp;gt;
-   &amp;lt;artifactId&amp;gt;spring-data-geode&amp;lt;/artifactId&amp;gt;
-   &amp;lt;version&amp;gt;2.0.0.RELEASE&amp;lt;/version&amp;gt;
-&amp;lt;/dependency&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;div class="title"&gt;&lt;strong&gt;&lt;em&gt;Gradle&lt;/em&gt;&lt;/strong&gt;&lt;/div&gt;
-&lt;p&gt;&lt;code&gt;compile 'org.springframework.data:spring-data-geode:2.0.0.RELEASE'&lt;/code&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;To this&amp;#8230;&amp;#8203;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="title"&gt;Maven&lt;/div&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;&amp;lt;dependency&amp;gt;
-  &amp;lt;groupId&amp;gt;org.springframework.data&amp;lt;/groupId&amp;gt;
-   &amp;lt;artifactId&amp;gt;spring-data-gemfire&amp;lt;/artifactId&amp;gt;
-   &amp;lt;version&amp;gt;2.0.0.RELEASE&amp;lt;/version&amp;gt;
-&amp;lt;/dependency&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;div class="title"&gt;&lt;strong&gt;&lt;em&gt;Gradle&lt;/em&gt;&lt;/strong&gt;&lt;/div&gt;
-&lt;p&gt;&lt;code&gt;compile 'org.springframework.data:spring-data-gemfire:2.0.0.RELEASE'&lt;/code&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;And, you are done!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;It is even possible to switch from &lt;code&gt;spring-data-gemfire&lt;/code&gt; back to &lt;code&gt;spring-data-geode&lt;/code&gt; again and everything just works.  The entire Pivotal GemFire codebase and all its features is in the open source version that is Apache Geode.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Functionally and behaviorally, they are the same.  The only discernable difference is, you get a different set of transitive dependencies, i.e. GemFire vs. Geode.  Try saying that with any other IMDG, particularly between the OS offering and the enterprise grade solution.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="sect3"&gt;
-&lt;h4 id="packaging-and-class-names"&gt;&lt;a class="anchor" href="#packaging-and-class-names"&gt;&lt;/a&gt;Packaging and Class Names&lt;/h4&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;em&gt;But wait! What about package and class names?&lt;/em&gt;  &lt;em&gt;Aren&amp;#8217;t they different in Pivotal GemFire and Apache Geode?&lt;/em&gt;  &lt;em&gt;Won&amp;#8217;t you change the names of packages and classes&lt;/em&gt;, like &lt;code&gt;org.springframework.data.gemfire.GemfireTemplate&lt;/code&gt; in &lt;em&gt;Spring Data GemFire&lt;/em&gt; to &lt;code&gt;org.springframework.data.geode.GeodeTemplate&lt;/code&gt; in &lt;em&gt;Spring Data Geode&lt;/em&gt;?&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;No; most definitely not!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;By way of example, consider the following GemFire/Geode interface, &lt;code&gt;org.apache.geode.cache.GemFireCache&lt;/code&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;In Pivotal GemFire 9.0 and later, the interface is &lt;a href="http://gemfire-91-javadocs.docs.pivotal.io/org/apache/geode/cache/GemFireCache.html"&gt;&lt;code&gt;org.apache.geode.cache.GemFireCache&lt;/code&gt;&lt;/a&gt;, using the &lt;code&gt;org.apache.geode&lt;/code&gt; package namespace.  In Apache Geode, the same interface is &lt;a href="http://geode.apache.org/releases/latest/javadoc/org/apache/geode/cache/GemFireCache.html"&gt;&lt;code&gt;org.apache.geode.cache.GemFireCache&lt;/code&gt;&lt;/a&gt; where the "GemFire" name is still used.  This is true of other classes and interfaces as well.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;This is actually quite important for interoperability purposes in addition to migration reasons, particularly in GemFire/Geode&amp;#8217;s distribution layer where proprietary messages are sent between clients and servers, and between peer members in a cluster.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="sect3"&gt;
-&lt;h4 id="versions"&gt;&lt;a class="anchor" href="#versions"&gt;&lt;/a&gt;Versions&lt;/h4&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;em&gt;Spring Data GemFire&lt;/em&gt; 2.0 (&lt;em&gt;Kay&lt;/em&gt;) is &lt;a href="https://github.com/spring-projects/spring-data-gemfire/blob/2.0.0.RELEASE/pom.xml#L22"&gt;based on&lt;/a&gt; Pivotal GemFire 9.1.1, which is itself based on Apache Geode 1.2.0.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;em&gt;Spring Data Geode&lt;/em&gt; 2.0 (&lt;em&gt;Kay&lt;/em&gt;) is &lt;a href="https://github.com/spring-projects/spring-data-geode/blob/2.0.0.RELEASE/pom.xml#L23"&gt;based on&lt;/a&gt; Apache Geode 1.2.1.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;So effectively, SDG^2 libs are interchangeable with no application code changes necessary.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Now that &lt;em&gt;Spring Data Geode&lt;/em&gt; is officially part of the &lt;em&gt;Spring Data Release Train&lt;/em&gt;, both &lt;em&gt;Spring Data Geode&lt;/em&gt; and &lt;em&gt;Spring Data GemFire&lt;/em&gt; align on version number and their version numbers will remain the same from this point forward.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="admonitionblock tip"&gt;
-&lt;table&gt;
-&lt;tr&gt;
-&lt;td class="icon"&gt;
-&lt;div class="title"&gt;Tip&lt;/div&gt;
-&lt;/td&gt;
-&lt;td class="content"&gt;
-We recommended that you either use the &lt;em&gt;Spring Data&lt;/em&gt; BOM file, i.e. &lt;code&gt;org.springframework.data:spring-data-releasetrain:Kay-RELEASE&lt;/code&gt; (as &lt;em&gt;Spring Boot&lt;/em&gt; does in its &lt;a href="https://github.com/spring-projects/spring-boot/blob/v2.0.0.M4/spring-boot-dependencies/pom.xml#L2232-L2238"&gt;dependency declaration&lt;/a&gt; and &lt;a href="https://github.com/spring-projects/spring-boot/blob/v2.0.0.M4/spring-boot-dependencies/pom.xml#L164"&gt;version&lt;/a&gt;), or &lt;a href="https://docs.spring.io/spring-boot/docs/2.0.0.M4/reference/htmlsingle/#using-boot-maven-parent-pom"&gt;inherit from the &lt;em&gt;Spring Boot&lt;/em&gt; starter parent POM&lt;/a&gt;. Alternatively, you can use the &lt;a href="http://platform.spring.io/platform/"&gt;&lt;em&gt;Spring IO Platform&lt;/em&gt;&lt;/a&gt;, which provides a curated and harmonized set of dependencies that have been tested to all work together.
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="sect1"&gt;
-&lt;h2 id="from-local-to-managed-environments"&gt;&lt;a class="anchor" href="#from-local-to-managed-environments"&gt;&lt;/a&gt;From Local To Managed Environments&lt;/h2&gt;
-&lt;div class="sectionbody"&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;The second objective is all about helping users on their journey to the cloud by utilizing &lt;a href="https://pivotal.io/cloud-native"&gt;&lt;em&gt;Cloud Native&lt;/em&gt; software design patterns&lt;/a&gt;, and employing cloud-ready solutions, like Pivotal GemFire, in &lt;em&gt;Spring&lt;/em&gt; fashion.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Back in 2003, a colleague of mine once said to me, “&lt;em&gt;Think Global, Build Local&lt;/em&gt;”.  He was being sarcastic, but I had just joined the company and was inquiring how to build, run and test our enterprise Java application locally, from my IDE.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;At the time, our team was busy trying to centralize all development activities.  This was due in part to how complex it had become to setup a developer’s local development environment, installing IBM WebSphere locally since our application had to be run on WebSphere.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Well, as it turns out, his comment was actually right!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;It is imperative that operational contracts don&amp;#8217;t impair development, especially during development since they are likely to change overtime anyway.  One of the primary reasons to have CI/CD is to bridge this gap.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;During development, developers need full control of their environment to deliver on the application&amp;#8217;s requirements.  Being able to build, spin up, test, debug and profile the application using lightweight processes is essential to being &lt;em&gt;Agile&lt;/em&gt;.  As the journey progresses from inception to production, CI/CD becomes essential in responding to change in a timely manner.  However, nothing should impede a developer&amp;#8217;s ability to deliver working code, and that begins inside the IDE.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;From the very beginning &lt;em&gt;Spring&lt;/em&gt; has been all about developer productivity, providing developers with the right framework(s) and tools to address any enterprise application concern quickly, reliably and with high quality.  And now, given technologies like &lt;a href="http://projects.spring.io/spring-boot/"&gt;&lt;em&gt;Spring Boot&lt;/em&gt;&lt;/a&gt; and &lt;a href="http://projects.spring.io/spring-cloud/"&gt;&lt;em&gt;Spring Cloud&lt;/em&gt;&lt;/a&gt;, the path is quite clear, it&amp;#8217;s all about "&lt;em&gt;Cloud Native&lt;/em&gt;".  This isn’t just &lt;em&gt;common sense&lt;/em&gt; development, it is &lt;em&gt;smart&lt;/em&gt; development.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;So, the main intent in objective #2 is to take these same concepts and apply them to data using &lt;em&gt;Spring Data GemFire&lt;/em&gt; or &lt;em&gt;Spring Data Geode&lt;/em&gt; for Pivotal GemFire or Apache Geode, respectively.  By using SDG&amp;#8217;s new &lt;a href="https://docs.spring.io/spring-data/gemfire/docs/current/reference/html/#bootstrap-annotation-config"&gt;Annotation-based configuration approach&lt;/a&gt; along with &lt;a href="https://github.com/spring-projects/spring-boot-data-geode"&gt; auto-configuration support for Pivotal GemFire/Apache Geode&lt;/a&gt; in users' &lt;em&gt;Spring Boot&lt;/em&gt; applications, it won&amp;#8217;t matter whether users are using Apache Geode locally or &lt;a href="https://docs.pivotal.io/p-cloud-cache/1-0/index.html"&gt;PCC&lt;/a&gt; / &lt;a href="https://docs.pivotal.io/ssc-gemfire/index.html"&gt;SSC&lt;/a&gt; (backed by Pivotal GemFire) in PCF globally, users will have a consistent experience with little to no code changes.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;This means less surprises and more focus on what actually matters, delivering value to end users.  After all, this is the whole point of a framework or tool, to simplify the process and handle the boilerplate that, while necessary, is non-essential to the end user.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="sect1"&gt;
-&lt;h2 id="summary"&gt;&lt;a class="anchor" href="#summary"&gt;&lt;/a&gt;Summary&lt;/h2&gt;
-&lt;div class="sectionbody"&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;em&gt;So, what is the difference?&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Absolutely nothing!  At least, there should be no apparent difference in practice, even across different contexts.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;I hope this post has helped people fundamentally understand and appreciate the scope of what is trying to be achieved here, that it extends well beyond functional, behavioral and superficial differences in &lt;em&gt;Spring Data GemFire&lt;/em&gt; and &lt;em&gt;Spring Data Geode&lt;/em&gt;. It also includes having a consistent experience from inception all the way to delivery, in production, in the most simple, easiest manner possible.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;As always, feedback is much appreciated, whether by filing a ticket in &lt;a href="https://jira.spring.io/browse/SGF"&gt;JIRA&lt;/a&gt;, submitting a &lt;a href="https://github.com/spring-projects/spring-data-gemfire/pulls"&gt;PR&lt;/a&gt; or simply asking a question in &lt;a href="https://stackoverflow.com/questions/tagged/spring-data-gemfire"&gt;&lt;em&gt;StackOverflow&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="admonitionblock important"&gt;
-&lt;table&gt;
-&lt;tr&gt;
-&lt;td class="icon"&gt;
-&lt;div class="title"&gt;Important&lt;/div&gt;
-&lt;/td&gt;
-&lt;td class="content"&gt;
-Be sure to get to &lt;a href="https://springoneplatform.io/"&gt;SpringOne Platform&lt;/a&gt; this year.  There is so much great content planned and new things to learn, particularly on the new Reactive Spring. This will be an event for the ages.
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;</content>
   </entry>
 </feed>

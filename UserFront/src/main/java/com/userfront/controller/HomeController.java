@@ -57,7 +57,7 @@ public class HomeController {
 				model.addAttribute("usernameExists", true); //usernameExist postavljamo na true u signup.html
 			}
 			
-			return "signup";
+			return "signup"; //signup.html
 		}
 		else {
 			Set<UserRole>userRoles = new HashSet<>();
