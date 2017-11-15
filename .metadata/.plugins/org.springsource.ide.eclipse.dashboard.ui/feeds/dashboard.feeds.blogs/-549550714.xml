@@ -5,7 +5,19 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2017-11-14T19:26:53Z</updated>
+  <updated>2017-11-15T00:00:00Z</updated>
+  <entry>
+    <title>Spring Tips: the Spring Boot Build Plugin</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/11/15/spring-tips-the-spring-boot-build-plugin" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2017-11-05:3087</id>
+    <updated>2017-11-15T00:00:00Z</updated>
+    <content type="html">&lt;p&gt;Hi Spring fans! In this installment of Spring Tips, we&amp;rsquo;ll look at the Spring Boot build plugin, &amp;ldquo;fat&amp;rdquo; .jars, executable .jars, and &amp;ldquo;thin&amp;rdquo; .jars.&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/arOqTOEtAVA" frameborder="0" gesture="media" allowfullscreen&gt;&lt;/iframe&gt;</content>
+  </entry>
   <entry>
     <title>This Week in Spring - November 14th 2017</title>
     <link rel="alternate" href="https://spring.io/blog/2017/11/14/this-week-in-spring-november-14th-2017" />
@@ -1482,40 +1494,5 @@ I along with most of my colleagues on the Spring team will be at &lt;a href="htt
 &lt;p&gt;For more information about the new &lt;code&gt;WebTestClient&lt;/code&gt; support and the other changes in 2.0, please refer to the &lt;a href="https://github.com/spring-projects/spring-restdocs/wiki/Spring-REST-Docs-2.0-Release-Notes"&gt;release notes&lt;/a&gt;.&lt;/p&gt;&lt;h1&gt;&lt;a href="#what-rsquo-s-next" class="anchor" name="what-rsquo-s-next"&gt;&lt;/a&gt;What&amp;rsquo;s next?&lt;/h1&gt;
 &lt;p&gt;We&amp;rsquo;re hoping to publish a release in a few weeks&amp;rsquo; time. Please take the release candidate for a spin and &lt;a href="https://github.com/spring-projects/spring-restdocs/issues/new"&gt;let us know&lt;/a&gt; if you find any problems or if you have a suggestion for some last-minute improvements.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://projects.spring.io/spring-restdocs/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-restdocs"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-restdocs/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-restdocs/docs/2.0.0.RC1/reference/html5/"&gt;Documentation&lt;/a&gt; | &lt;a href="https://stackoverflow.com/questions/tagged/spring-restdocs"&gt;Stack Overflow&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-restdocs"&gt;Gitter&lt;/a&gt;&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Reactor Bismuth-SR3 is now available</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/10/27/reactor-bismuth-sr3-is-now-available" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Stephane Maldini</name>
-    </author>
-    <id>tag:spring.io,2017-10-27:3075</id>
-    <updated>2017-10-27T18:27:30Z</updated>
-    <content type="html">&lt;p&gt;A shipment of fixes and goodies has arrived and it is brought to you by the new &lt;code&gt;Bismuth-SR3&lt;/code&gt; &lt;a href="https://github.com/reactor/reactor"&gt;Bill Of Material&lt;/a&gt;. This version is now used by &lt;a href="https://spring.io/blog/2017/10/24/spring-framework-5-0-1-available-now"&gt;Spring Framework 5.0.1&lt;/a&gt; ! Our site &lt;a href="http://projectreactor.io"&gt;projectreactor.io&lt;/a&gt; reflects those latest updates.&lt;/p&gt;&lt;h1&gt;&lt;a href="#reactor-core-3-1-1" class="anchor" name="reactor-core-3-1-1"&gt;&lt;/a&gt;Reactor-Core 3.1.1&lt;/h1&gt;
-&lt;p&gt;&lt;a href="https://github.com/reactor/reactor-core/releases/tag/v3.1.1.RELEASE"&gt;release notes&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;A quality update including more than 20 fixes and just a couple new features: Kotlin extensions for Reactor conversion from &lt;code&gt;Publisher&lt;/code&gt; and the &lt;code&gt;Flux#limitRequest&lt;/code&gt; operator alternative to &lt;code&gt;Flux#take&lt;/code&gt; with an explicit upper limit to the produced demand.&lt;/p&gt;
-&lt;p&gt;We are now working on &lt;code&gt;3.1.2.RELEASE&lt;/code&gt;. Have a look at our &lt;a href="http://github.com/reactor/reactor-core/issues"&gt;issues backlog&lt;/a&gt; for a more detailed scope.&lt;/p&gt;&lt;h1&gt;&lt;a href="#reactor-addons-3-1-2" class="anchor" name="reactor-addons-3-1-2"&gt;&lt;/a&gt;Reactor Addons 3.1.2&lt;/h1&gt;
-&lt;p&gt;&lt;a href="https://github.com/reactor/reactor-addons/releases/tag/v3.1.2.RELEASE"&gt;release notes&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;We now have official &lt;code&gt;Kotlin&lt;/code&gt; extensions for some of our extra operators and we will continue adding some in the future. This version highlight is the addition of &lt;a href="https://github.com/reactor/reactor-addons/blob/v3.1.2.RELEASE/reactor-extra/src/main/kotlin/reactor/retry/RetryExtensions.kt"&gt;Retry&lt;/a&gt;, &lt;a href="https://github.com/reactor/reactor-addons/blob/master/reactor-extra/src/main/kotlin/reactor/retry/RepeatExtensions.kt"&gt;Repeat&lt;/a&gt; and &lt;a href="https://github.com/reactor/reactor-addons/blob/master/reactor-extra/src/main/kotlin/reactor/math/MathFluxExtensions.kt"&gt;Mathematic extensions&lt;/a&gt;. We are quite excited by the possibilities offered with the kotlin extensions and we encourage our kotlin users to try &lt;code&gt;reactor-extra&lt;/code&gt; !&lt;/p&gt;
-&lt;p&gt;Take a glimpse at some of those convenient extensions :&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint"&gt;data class User(val age: Int,val name: String)&#xD;
-&#xD;
-val userList = listOf(User(18, &amp;quot;bob&amp;quot;),  User(80, &amp;quot;grandpa&amp;quot;), User(1, &amp;quot;baby&amp;quot;))&#xD;
-&#xD;
-users.toFlux()&#xD;
-     .retryExponentialBackoff(4, Duration.ofMillis(100))&#xD;
-     .max { a, b -&amp;gt; b.age - a.age }&#xD;
-     .map { it.name }&#xD;
-     .test()&#xD;
-     .expectNext(&amp;quot;baby&amp;quot;)&#xD;
-     .verifyComplete()
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;We are now working on &lt;code&gt;3.1.3.RELEASE&lt;/code&gt;, and our community is invited to submit ideas for more extensions or operators. We already see a certain interest into traceability, circuit breaker and routing and will evaluate how to scope those features in the coming weeks.&lt;/p&gt;&lt;h1&gt;&lt;a href="#reactor-netty-0-7-1" class="anchor" name="reactor-netty-0-7-1"&gt;&lt;/a&gt;Reactor Netty 0.7.1&lt;/h1&gt;
-&lt;p&gt;&lt;a href="https://github.com/reactor/reactor-netty/releases/tag/v0.7.1.RELEASE"&gt;release notes&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;A recommended update that fixes lifecycle issues that could stall our connection pool in specific situations. Also our &lt;code&gt;HttpServer&lt;/code&gt; now correctly deals with HEAD request and matching response content-length. We &lt;a href="https://github.com/netty/netty/pull/7309"&gt;identified and fixed a regression in Netty SSL handling&lt;/a&gt;, it affects versions ranging from 4.1.14 to 4.1.16. Please monitor the next 4.1.17 Netty version if your application depends on stream large payloads over SSL.&lt;/p&gt;
-&lt;p&gt;We are now working on &lt;code&gt;0.7.2.RELEASE&lt;/code&gt; and the following &lt;code&gt;0.8.0&lt;/code&gt;. We still have on-going investigations and we are processing a wave of new feedbacks thanks to the final Spring Framework release popularity. &lt;code&gt;0.8&lt;/code&gt; aims to build on this maturity and delivers a major API quality improvement.&lt;/p&gt;&lt;h1&gt;&lt;a href="#what-happened-to-sr1-and-sr2" class="anchor" name="what-happened-to-sr1-and-sr2"&gt;&lt;/a&gt;What happened to SR1 and SR2?!&lt;/h1&gt;
-&lt;p&gt;Unfortunately we suffered twice from a POM generation issue, while these versions exist in Maven Central, they both present a defect with the definition for &lt;code&gt;reactor-extra&lt;/code&gt;. Please refrain from using the &lt;code&gt;Bismuth-SR1&lt;/code&gt; and &lt;code&gt;Bismuth-SR2&lt;/code&gt; BOMs as well as &lt;code&gt;reactor-extra:3.1.1.RELEASE&lt;/code&gt;. Fingers crossed the next version should be &lt;code&gt;Bismuth-SR4&lt;/code&gt; prior to Spring Framework &lt;code&gt;5.0.2&lt;/code&gt;.&lt;/p&gt;&lt;h1&gt;&lt;a href="#see-you-soon" class="anchor" name="see-you-soon"&gt;&lt;/a&gt;See you soon ?&lt;/h1&gt;
-&lt;p&gt;If you are interested in all the new bits and our next plans, the full team will be at &lt;a href="https://springoneplatform.io"&gt;Spring One Platform&lt;/a&gt; and a &lt;a href="https://springoneplatform.io/sessions/project-reactor-now-and-tomorrow"&gt;dedicated session is planned&lt;/a&gt;. In addition, Reactive programming with Reactor will be covered by most of the Spring tracks !&lt;/p&gt;</content>
   </entry>
 </feed>
