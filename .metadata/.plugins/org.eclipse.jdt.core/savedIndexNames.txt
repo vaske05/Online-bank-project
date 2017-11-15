@@ -23,7 +23,6 @@ INDEX VERSION 1.130+C:\Users\Vaske\Desktop\Online Bank\.metadata\.plugins\org.ec
 1065330309.index
 4155528319.index
 1557071808.index
-1019537821.index
 664140773.index
 1244941363.index
 4049972751.index
