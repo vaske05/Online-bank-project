@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.userfront.domain.PrimaryAccount;
@@ -53,8 +54,13 @@ public class AccountController {
 		
 	}
 	
-	@RequestMapping(value = "/deposit", method = RequestMapping.POST)
-	public String deposit()
+	@RequestMapping(value = "/deposit", method = RequestMethod.POST)
+	public String depositPOST(@ModelAttribute("amount") String amount, @ModelAttribute("accountType") String accountType, Principal principal) {
+		
+		accountService.deposit(accountType, Double.parseDouble(amount), principal);
+		
+		return "redirect:/userFront";
+	}
 	
 	
 
