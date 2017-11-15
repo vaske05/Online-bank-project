@@ -62,6 +62,12 @@ public class AccountController {
 		return "redirect:/userFront";
 	}
 	
+	@RequestMapping(value = "/withdraw", method = RequestMethod.GET)
+	public String withdraw(Model model) {
+		
+		return "withdraw"; //deposit.html
+	}
+	
 	
 
 }
