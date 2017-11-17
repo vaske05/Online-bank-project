@@ -1,6 +1,7 @@
 package com.userfront.service.UserServiceImpl;
 
 import java.math.BigDecimal;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,8 @@ import com.userfront.domain.SavingsTransaction;
 import com.userfront.domain.User;
 import com.userfront.service.TransactionService;
 import com.userfront.service.UserService;
+
+
 
 @Service
 public class TransactionServiceImpl implements TransactionService {
@@ -71,21 +74,31 @@ public class TransactionServiceImpl implements TransactionService {
 			PrimaryAccount primaryAccount, SavingsAccount savingsAccount) throws Exception {
 		
 		if(transferFrom.equalsIgnoreCase("Primary") && transferTo.equalsIgnoreCase("Savings")) {
-			
+			//Transfer sa Primary acc. na Savings acc.
 			primaryAccount.setAccountBalance(primaryAccount.getAccountBalance().subtract(new BigDecimal(amount)));
 			savingsAccount.setAccountBalance(savingsAccount.getAccountBalance().add(new BigDecimal(amount)));
-			
-			primaryAccountDao.save(primaryAccount);
+			primaryAccountDao.save(primaryAccount); //Snimamo promenjena novcana stanja na akauntima.
 			savingsAccountDao.save(savingsAccount);
 			
 			Date date = new Date();
 			
-			PrimaryTransaction primaryTransaction = new PrimaryTransaction(date,"");
+			PrimaryTransaction primaryTransaction = new PrimaryTransaction(date,"Between account transfer from " + transferFrom + " to " + transferTo, "Account", "Finished", Double.parseDouble(amount), primaryAccount.getAccountBalance(), primaryAccount);                                                  
 			primaryTransactionDao.save(primaryTransaction);
+			//Ako je transakcija izmedju dva akaunta logicno je da se pamti transakcija za oba. Tako da ovde nedostaje 
+			//snimanje u Savings akaunt tabeli. Moze da se doda. Otom potom.
 			
 		}
 		else if(transferFrom.equalsIgnoreCase("Savings") && transferTo.equalsIgnoreCase("Primary")) {
+			//Transfer sa Savings acc. na Primary acc.
+			primaryAccount.setAccountBalance(primaryAccount.getAccountBalance().add(new BigDecimal(amount)));
+			savingsAccount.setAccountBalance(savingsAccount.getAccountBalance().subtract(new BigDecimal(amount)));
+			primaryAccountDao.save(primaryAccount); //Snimamo promenjena novcana stanja na akauntima.
+			savingsAccountDao.save(savingsAccount);
 			
+			Date date = new Date();
+			
+			SavingsTransaction savingsTransaction = new SavingsTransaction(date, "Between account transfer from " + transferFrom + " to " + transferTo, "Transfer", "Finished", Double.parseDouble(amount), savingsAccount.getAccountBalance(), savingsAccount);                                                  
+			savingsTransactionDao.save(savingsTransaction); //Snimamo transakciju izmedju dva akaunta u tabeli.
 		}
 		else {
 			

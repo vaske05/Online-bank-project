@@ -18,7 +18,7 @@ import com.userfront.service.UserService;
 @Controller
 @RequestMapping("/transfer")
 public class TransferController {
-	
+
 	@Autowired
 	private TransactionService transactionService;
 	
