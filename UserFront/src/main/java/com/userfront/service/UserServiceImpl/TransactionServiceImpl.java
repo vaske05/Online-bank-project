@@ -1,8 +1,10 @@
 package com.userfront.service.UserServiceImpl;
 
 import java.math.BigDecimal;
+import java.security.Principal;
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,6 +15,7 @@ import com.userfront.DataAccessObject.SavingsAccountDao;
 import com.userfront.DataAccessObject.SavingsTransactionDao;
 import com.userfront.domain.PrimaryAccount;
 import com.userfront.domain.PrimaryTransaction;
+import com.userfront.domain.Recipient;
 import com.userfront.domain.SavingsAccount;
 import com.userfront.domain.SavingsTransaction;
 import com.userfront.domain.User;
@@ -106,6 +109,16 @@ public class TransactionServiceImpl implements TransactionService {
 		}
 	
 		
+	}
+	
+	public List<Recipient> findRecipientList(Principal principal) {
+		String username = principal.getName();
+		List<Recipient> recipientList = recipientDao.findAll().stream() //Convert list to stream -> findAll vraca sve user-e iz baze
+				.filter(recipient -> username.equals(recipient.getUser().getUsername()))
+				.collect(Collectors.toList());
+		//recipientList -> Lista recipijenata koji su povezani(bind-ovani) sa ovim User-om
+		
+		return recipientList;
 	}
 	
 	

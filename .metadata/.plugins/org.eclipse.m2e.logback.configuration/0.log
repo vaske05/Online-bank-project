@@ -3051,3 +3051,33 @@ Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: expected > 
 2017-11-17 16:09:05,461 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
 2017-11-17 16:09:05,464 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 38 resources
 2017-11-17 16:09:05,474 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-17 16:09:05,474 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Vaske\Desktop\Online Bank\UserFront\src\test\resources
+2017-11-18 14:52:08,146 [Worker-175] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-18 14:52:08,185 [Worker-175] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-11-18 14:52:08,188 [Worker-175] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 38 resources
+2017-11-18 14:52:08,199 [Worker-175] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-18 14:52:08,200 [Worker-175] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Vaske\Desktop\Online Bank\UserFront\src\test\resources
+2017-11-18 14:53:03,332 [Worker-173] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-18 14:53:03,335 [Worker-173] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-11-18 14:53:03,338 [Worker-173] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 38 resources
+2017-11-18 14:53:03,341 [Worker-173] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-18 14:53:03,341 [Worker-173] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Vaske\Desktop\Online Bank\UserFront\src\test\resources
+2017-11-18 14:55:59,561 [Worker-175] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-18 14:55:59,562 [Worker-175] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-11-18 14:55:59,565 [Worker-175] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 38 resources
+2017-11-18 14:55:59,569 [Worker-175] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-18 14:55:59,569 [Worker-175] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Vaske\Desktop\Online Bank\UserFront\src\test\resources
+2017-11-18 14:56:09,200 [Worker-175] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-18 14:56:09,202 [Worker-175] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-11-18 14:56:09,205 [Worker-175] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 38 resources
+2017-11-18 14:56:09,209 [Worker-175] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-18 14:56:09,209 [Worker-175] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Vaske\Desktop\Online Bank\UserFront\src\test\resources
+2017-11-18 15:02:40,939 [Worker-174] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-18 15:02:40,941 [Worker-174] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-11-18 15:02:40,944 [Worker-174] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 38 resources
+2017-11-18 15:02:40,947 [Worker-174] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-18 15:02:40,948 [Worker-174] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Vaske\Desktop\Online Bank\UserFront\src\test\resources
+2017-11-18 15:06:44,979 [Worker-179] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-18 15:06:44,988 [Worker-179] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-11-18 15:06:44,992 [Worker-179] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 38 resources
+2017-11-18 15:06:45,002 [Worker-179] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
