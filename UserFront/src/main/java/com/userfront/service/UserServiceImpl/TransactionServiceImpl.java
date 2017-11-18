@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import com.userfront.DataAccessObject.PrimaryAccountDao;
 import com.userfront.DataAccessObject.PrimaryTransactionDao;
+import com.userfront.DataAccessObject.RecipientDao;
 import com.userfront.DataAccessObject.SavingsAccountDao;
 import com.userfront.DataAccessObject.SavingsTransactionDao;
 import com.userfront.domain.PrimaryAccount;
@@ -41,6 +42,10 @@ public class TransactionServiceImpl implements TransactionService {
 	
 	@Autowired
 	private SavingsAccountDao savingsAccountDao;
+	
+	@Autowired
+	private RecipientDao recipientDao;
+	
 	
 	public List<PrimaryTransaction> findPrimaryTransactionList(String username) {
 		User user = userService.findByUsername(username);
@@ -122,7 +127,7 @@ public class TransactionServiceImpl implements TransactionService {
 	}
 	
 	public Recipient saveRecipient(Recipient recipient) {
-		return recipient.save(recipient);
+		return recipientDao.save(recipient);
 	}
 	
 	public Recipient findRecipientByName(String recipientName) {

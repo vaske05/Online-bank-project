@@ -94,7 +94,7 @@ public class TransferController {
 		
 		transactionService.deleteRecipientByName(recipientName);
 		
-		List<Recipient> recipientList = transactionalService.findRecipientList(principal);
+		List<Recipient> recipientList = transactionService.findRecipientList(principal);
 		
 		Recipient recipient = new Recipient();
 		
