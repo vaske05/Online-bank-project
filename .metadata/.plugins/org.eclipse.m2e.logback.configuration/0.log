@@ -3081,3 +3081,17 @@ Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: expected > 
 2017-11-18 15:06:44,988 [Worker-179] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
 2017-11-18 15:06:44,992 [Worker-179] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 38 resources
 2017-11-18 15:06:45,002 [Worker-179] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-18 15:06:45,002 [Worker-179] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Vaske\Desktop\Online Bank\UserFront\src\test\resources
+2017-11-18 15:08:20,093 [Worker-178] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-18 15:08:20,096 [Worker-178] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-11-18 15:08:20,099 [Worker-178] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 38 resources
+2017-11-18 15:08:20,111 [Worker-178] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-18 15:08:20,111 [Worker-178] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Vaske\Desktop\Online Bank\UserFront\src\test\resources
+2017-11-18 15:10:20,643 [Worker-181] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-18 15:10:20,651 [Worker-181] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-11-18 15:10:20,657 [Worker-181] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 38 resources
+2017-11-18 15:10:20,663 [Worker-181] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-18 15:10:20,663 [Worker-181] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Vaske\Desktop\Online Bank\UserFront\src\test\resources
+2017-11-18 15:11:11,015 [Worker-181] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-18 15:11:11,017 [Worker-181] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-11-18 15:11:11,020 [Worker-181] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 38 resources

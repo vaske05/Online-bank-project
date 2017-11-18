@@ -121,6 +121,18 @@ public class TransactionServiceImpl implements TransactionService {
 		return recipientList;
 	}
 	
+	public Recipient saveRecipient(Recipient recipient) {
+		return recipient.save(recipient);
+	}
+	
+	public Recipient findRecipientByName(String recipientName) {
+		return recipientDao.findByName(recipientName);
+	}
+	
+	public void deleteRecipientByName(String recipientName) {
+		recipientDao.deleteByName(recipientName);
+	}
+	
 	
 
 }
