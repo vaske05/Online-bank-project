@@ -138,6 +138,49 @@ public class TransactionServiceImpl implements TransactionService {
 		recipientDao.deleteByName(recipientName);
 	}
 	
-	
-
+	public void toSomeoneElseTransfer(Recipient recipient, String accountType, String amount, PrimaryAccount primaryAccount, SavingsAccount savingsAccount) {
+		
+		if(accountType.equalsIgnoreCase("Primary")) {
+			
+			primaryAccount.setAccountBalance(primaryAccount.getAccountBalance().subtract(new BigDecimal(amount)));
+			primaryAccountDao.save(primaryAccount);
+			
+			Date date = new Date();
+			
+			//Kreiramo novu transakciju.
+			PrimaryTransaction primaryTransaction = new PrimaryTransaction(date, "Transfer to recipient " + recipient.getName(), "Transfer", "Finished", Double.parseDouble(amount), primaryAccount.getAccountBalance(), primaryAccount);
+			//Snimamo transakciju u DB preko DAO objekta
+			primaryTransactionDao.save(primaryTransaction);
+		} else if(accountType.equalsIgnoreCase("Savings")) {
+			
+			savingsAccount.setAccountBalance(savingsAccount.getAccountBalance().subtract(new BigDecimal(amount)));
+			savingsAccountDao.save(savingsAccount);
+			
+			Date date = new Date();
+			
+			//Kreiramo novu transakciju
+			SavingsTransaction savingsTransaction = new SavingsTransaction(date,"Transfer to recipient " + recipient.getName(), "Transfer", "Finished", Double.parseDouble(amount), savingsAccount.getAccountBalance(), savingsAccount);
+			//Snimamo transakciju u DB preko DAO objekta
+			savingsTransactionDao.save(savingsTransaction);
+		}
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

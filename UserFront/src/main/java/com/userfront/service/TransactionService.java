@@ -11,16 +11,16 @@ import com.userfront.domain.SavingsTransaction;
 
 public interface TransactionService {
 	
-	public List<PrimaryTransaction> findPrimaryTransactionList(String username);
-	public List<SavingsTransaction> findSavingsTransactionList(String username);
+	List<PrimaryTransaction> findPrimaryTransactionList(String username);
+	List<SavingsTransaction> findSavingsTransactionList(String username);
 	
-	public void savePrimaryDepositTransaction(PrimaryTransaction primaryTransaction);
-	public void saveSavingsDepositTransaction(SavingsTransaction savingsTransaction);
+	void savePrimaryDepositTransaction(PrimaryTransaction primaryTransaction);
+	void saveSavingsDepositTransaction(SavingsTransaction savingsTransaction);
 	
-	public void savePrimaryWithdrawTransaction(PrimaryTransaction primaryTransaction);
-	public void saveSavingsWithdrawTransaction(SavingsTransaction savingsTransaction);
+	void savePrimaryWithdrawTransaction(PrimaryTransaction primaryTransaction);
+	void saveSavingsWithdrawTransaction(SavingsTransaction savingsTransaction);
 	
-	public void betweenAccountsTransfer(String transferFrom,String transferTo,String amount,
+	void betweenAccountsTransfer(String transferFrom,String transferTo,String amount,
 			PrimaryAccount primaryAccount,SavingsAccount savingsAccount) throws Exception;
 	
 	List<Recipient> findRecipientList(Principal principal);
@@ -29,5 +29,7 @@ public interface TransactionService {
 	Recipient findRecipientByName(String recipientName);
 	
 	void deleteRecipientByName(String recipientName);
+	
+	void toSomeoneElseTransfer(Recipient recipient, String accountType, String amount, PrimaryAccount primaryAccount, SavingsAccount savingsAccount);
 
 }
