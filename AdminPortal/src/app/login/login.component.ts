@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs/Observable'; //
+import { Observable } from 'rxjs/Observable';
 import { LoginService } from '../login.service';
 
 @Component({
@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   password: string;
 
   constructor(private loginService: LoginService) {
-    if(localStorage.getItem('PortalAdminHasLoggedIn') == '' && localStorage.getItem('PortalAdminHasLoggedIn') == null) {
+    if(localStorage.getItem('PortalAdminHasLoggedIn') == '' || localStorage.getItem('PortalAdminHasLoggedIn') == null) {
       this.loggedIn = false;
     } else {
       this.loggedIn = true;
