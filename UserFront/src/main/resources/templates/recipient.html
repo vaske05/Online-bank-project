@@ -36,9 +36,10 @@
                               id="recipientDescription" placeholder="Description" th:text="${recipient.description}"></textarea>
                 </div>
 
-                <input type="hidden"
+                  <input type="hidden"
                        name="${_csrf.parameterName}"
                        value="${_csrf.token}"/>
+                      
 
                 <button class="btn btn-primary" type="submit">Add/Edit Recipient</button>
             </form>

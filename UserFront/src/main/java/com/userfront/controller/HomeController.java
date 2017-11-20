@@ -83,6 +83,7 @@ public class HomeController {
 		model.addAttribute("primaryAccount", primaryAccount);
 		model.addAttribute("savingsAccount", savingsAccount);
 		
+		
 		return "userFront";
 	}
 }

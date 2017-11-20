@@ -3842,3 +3842,67 @@ Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: expected > 
 2017-11-20 17:28:30,306 [Worker-140] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2017-11-20 17:28:30,306 [Worker-140] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
 2017-11-20 17:28:30,313 [Worker-140] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-20 17:28:30,313 [Worker-140] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Vaske\Desktop\Online Bank\UserFront\src\test\resources
+2017-11-20 18:39:21,868 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-20 18:39:21,890 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-11-20 18:39:21,903 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 41 resources
+2017-11-20 18:39:21,920 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-20 18:39:21,920 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Vaske\Desktop\Online Bank\UserFront\src\test\resources
+2017-11-20 18:42:55,692 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-20 18:42:55,720 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-11-20 18:42:55,727 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 41 resources
+2017-11-20 18:42:55,743 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-20 18:42:55,743 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Vaske\Desktop\Online Bank\UserFront\src\test\resources
+2017-11-20 18:44:26,315 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-20 18:44:26,335 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-11-20 18:44:26,342 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 41 resources
+2017-11-20 18:44:26,350 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-20 18:44:26,350 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Vaske\Desktop\Online Bank\UserFront\src\test\resources
+2017-11-20 18:54:46,928 [Worker-164] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-web/4.3.12.RELEASE/spring-web-4.3.12.RELEASE-sources.jar
+2017-11-20 18:54:47,385 [Worker-164] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-web/4.3.12.RELEASE/spring-web-4.3.12.RELEASE-sources.jar
+2017-11-20 18:54:48,084 [Worker-164] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-web:4.3.12.RELEASE
+2017-11-20 18:54:48,940 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-20 18:54:48,941 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-11-20 18:54:48,942 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-11-20 18:54:48,944 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-20 18:54:48,944 [Worker-166] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Vaske\Desktop\Online Bank\UserFront\src\test\resources
+2017-11-20 18:58:57,731 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-20 18:58:57,742 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-11-20 18:58:57,747 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 41 resources
+2017-11-20 18:58:57,757 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-20 18:58:57,757 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Vaske\Desktop\Online Bank\UserFront\src\test\resources
+2017-11-20 19:01:45,375 [Worker-168] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-core/3.2.3.RELEASE/spring-security-core-3.2.3.RELEASE-sources.jar
+2017-11-20 19:01:45,697 [Worker-168] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-core/3.2.3.RELEASE/spring-security-core-3.2.3.RELEASE-sources.jar
+2017-11-20 19:01:45,893 [Worker-168] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.security:spring-security-core:3.2.3.RELEASE
+2017-11-20 19:01:46,162 [Worker-165] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-20 19:01:46,162 [Worker-165] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-11-20 19:01:46,163 [Worker-165] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-11-20 19:01:46,166 [Worker-165] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-20 19:01:46,166 [Worker-165] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Vaske\Desktop\Online Bank\UserFront\src\test\resources
+2017-11-20 19:07:09,238 [Worker-152] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-20 19:07:09,253 [Worker-152] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-11-20 19:07:09,260 [Worker-152] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 41 resources
+2017-11-20 19:07:09,273 [Worker-152] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-20 19:07:09,274 [Worker-152] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Vaske\Desktop\Online Bank\UserFront\src\test\resources
+2017-11-20 19:08:08,437 [Worker-179] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-20 19:08:08,464 [Worker-179] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-11-20 19:08:08,472 [Worker-179] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 41 resources
+2017-11-20 19:08:08,490 [Worker-179] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-20 19:08:08,490 [Worker-179] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Vaske\Desktop\Online Bank\UserFront\src\test\resources
+2017-11-20 19:15:07,519 [Worker-187] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-config/3.2.3.RELEASE/spring-security-config-3.2.3.RELEASE-sources.jar
+2017-11-20 19:15:07,834 [Worker-187] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-config/3.2.3.RELEASE/spring-security-config-3.2.3.RELEASE-sources.jar
+2017-11-20 19:15:08,192 [Worker-187] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.security:spring-security-config:3.2.3.RELEASE
+2017-11-20 19:15:08,464 [Worker-152] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-20 19:15:08,465 [Worker-152] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-11-20 19:15:08,465 [Worker-152] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-11-20 19:15:08,468 [Worker-152] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-20 19:15:08,468 [Worker-152] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Vaske\Desktop\Online Bank\UserFront\src\test\resources
+2017-11-20 19:34:35,710 [Worker-196] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-20 19:34:35,711 [Worker-196] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-11-20 19:34:35,712 [Worker-196] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-11-20 19:34:35,718 [Worker-196] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-20 19:34:35,719 [Worker-196] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Vaske\Desktop\Online Bank\UserFront\src\test\resources
+2017-11-20 19:37:10,627 [Worker-202] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-11-20 19:37:10,628 [Worker-202] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-11-20 19:37:10,629 [Worker-202] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-11-20 19:37:10,635 [Worker-202] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.

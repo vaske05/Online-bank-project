@@ -54,6 +54,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		
 		http.authorizeRequests()./*antMatchers("/**").*/antMatchers(PUBLIC_MATCHERS).permitAll().anyRequest().authenticated();
 		
+		//Ovde je definisano koja je login stranica, gde se ide ako je logovanje uspesno, a gde se ide ako je log. neuspesno.
 		http
 				.csrf().disable()
 				.formLogin().failureUrl("/index?error").defaultSuccessUrl("/userFront").loginPage("/index").permitAll()
