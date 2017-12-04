@@ -125,6 +125,4 @@ public class TransferController {
 		
 		return "redirect:/userFront";
 	}
-	
-
 }

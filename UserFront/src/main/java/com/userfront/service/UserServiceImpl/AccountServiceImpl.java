@@ -40,7 +40,7 @@ public class AccountServiceImpl implements AccountService {
 		
 		PrimaryAccount primaryAccount = new PrimaryAccount();
 		primaryAccount.setAccountBalance(new BigDecimal(0.0));
-		primaryAccount.setAccountNumber(accountGen());
+		primaryAccount.setAccountNumber(accountGen()); 
 		
 		primaryAccountDao.save(primaryAccount);
 		
@@ -53,8 +53,7 @@ public class AccountServiceImpl implements AccountService {
 		
 		SavingsAccount savingsAccount = new SavingsAccount();
 		savingsAccount.setAccountBalance(new BigDecimal(0.0));
-		savingsAccount.setAccountNumber(accountGen());
-		
+		savingsAccount.setAccountNumber(accountGen()); //Postavljanje broja računa(za jedan veći od prethodnog).		
 		savingsAccountDao.save(savingsAccount);
 		
 		return savingsAccountDao.findByAccountNumber(savingsAccount.getAccountNumber());
