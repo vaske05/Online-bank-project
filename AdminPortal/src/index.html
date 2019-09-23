@@ -10,10 +10,14 @@
   <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<body>
-  <app-root></app-root>
+<body> 
+  <app-root *ngIf="showLoadingIndicator" class="">
+    <div *ngIf="showLoadingIndicator" class="spinner">
+
+    </div>
+  </app-root>
   <script type="text/javascript" src="assets/js/jquery.js"></script>
   <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-  
+
 </body>
 </html>
