@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
+//import { Observable } from 'rxjs/Observable';
 import { LoginService } from '../login.service';
+
 
 @Component({
   selector: 'app-login',
@@ -23,15 +24,15 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     this.loginService.sendCredential(this.username, this.password).subscribe(
-      res => {
+      res => { 
+        //Success login
         this.loggedIn = true;
         localStorage.setItem('PortalAdminHasLoggedIn', 'true');
         location.reload();
       },
-      err => { console.log(err); }
+      err => console.log(err) 
     );
   }
 
   ngOnInit() {}
-
 }

@@ -14,31 +14,32 @@ export class NavbarComponent implements OnInit {
   constructor(private loginService: LoginService, private router: Router) {
     if(localStorage.getItem('PortalAdminHasLoggedIn') == '') {
       this.loggedIn = false;
-    }
-    else {
+    } else {
       this.loggedIn = true;
     }
-  }
+   }
 
-  logout() {
-    this.loginService.logout().subscribe(
-      res => {
-        localStorage.setItem('PortalAdminHasLoggedIn', '');
-      },
-      err => { console.log(err); }
-    );
-    location.reload();
-    this.router.navigate(['/login']);
-  }
+   logout() {
+     this.loginService.logout().subscribe(
+       res => {
+         localStorage.setItem('PortalAdminHasLoggedIn', '');
+         this.router.navigate(['/login']);
+         location.reload();
 
-  getDisplay() {
-    if(!this.loggedIn) {
-      return 'none';
-    }
-    else {
-      return '';
-    }
-  }
+       },
+       err => console.log(err)
+     );
+     
+   }
+
+   getDisplay() {
+     if(!this.loggedIn) {
+       return "none"
+     } else {
+       return "";
+
+     }
+   }
 
   ngOnInit() {
   }
